@@ -1,0 +1,32 @@
+.app-login {
+    background: #a6ce39;
+}
+.btn.btn-success {
+    border-color: #a6ce39;
+    border-bottom-color: #a6ce39;
+    background-color: #a6ce39;
+}
+aside.app-sidebar .sidebar-menu ul.sidebar-nav > li.active > a .icon {
+    background-color: #a6ce39;
+    color: white;
+}
+.pagination > li.active > a, .pagination > li.active > span {
+    border: 0;
+    border-bottom: 2px solid #a6ce39;
+    background-color: #a6ce39;
+}
+aside.app-sidebar .sidebar-menu ul.sidebar-nav > li.active > a .title {
+    color: #a6ce39;
+}
+.note-editor.note-frame .note-editing-area .note-editable {
+    min-height: 100px;
+}
+
+aside.app-sidebar .sidebar-menu ul.sidebar-nav {
+    padding: 0px;
+}
+
+aside.app-sidebar {
+    height: auto;
+}
+

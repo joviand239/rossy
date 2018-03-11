@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700');
+
+#maintenance {
+  background: url("../images/maintenance-image.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  padding: 20px 0px;
+  height: 100vh;
+  text-align: center;
+  color: white;
+  display: flex;
+  align-items: center;
+  font-family: 'Open Sans', sans-serif;
+
+  .logo {
+    margin-bottom: 50px;
+  }
+
+  .title {
+    font-size: 70px;
+    letter-spacing: 3px;
+    font-weight: 600;
+    font-family: 'Lato', sans-serif;
+  }
+
+  .small {
+    border-color: white;
+    border-width: 3px;
+    width: 155px;
+    margin-bottom: 40px;
+    margin-top: 10px;
+  }
+
+  .subtitle {
+    font-size: 20px;
+    width: 60%;
+    margin: auto;
+    font-weight: 300;
+    letter-spacing: 1px;
+    margin-bottom: 40px;
+  }
+
+  .main-btn {
+    color: white;
+    border: 1px solid;
+    border-radius: 0px;
+    padding: 10px 50px;
+    font-family: 'Lato', sans-serif;
+    letter-spacing: 1px;
+    font-size: 14px;
+    transition: all 0.5s ease;
+
+    &:focus {
+      outline: none;
+      box-shadow: none;
+    }
+
+    &:hover {
+      color: #87163c;
+      background-color: #efddac;
+      border-color: #efddac;
+    }
+  }
+
+  .copyright {
+    font-size: 12px;
+    margin-bottom: 15px;
+    margin-top: 50px;
+  }
+
+  .socmed-list {
+    list-style: none;
+    display: flex;
+    padding: 0px;
+    align-items: center;
+    justify-content: center;
+
+
+    .fa {
+      color: white;
+      padding: 0px 10px;
+      font-size: 20px;
+      transition: all 0.5s ease;
+
+      &:hover {
+        color: #efddac;
+      }
+    }
+  }
+
+
+  .contact-wrapper {
+    display: none;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+
+    .fa {
+      font-size: 40px;
+      color: #efddac;
+      margin-bottom: 15px;
+    }
+
+    p {
+      margin-bottom: 0px;
+      font-size: 14px;
+    }
+  }
+
+
+}
+
+
+@media only screen and (max-width: 480px) {
+  #maintenance {
+    height: auto;
+
+    .subtitle {
+      width: 100%;
+    }
+
+    .contact-wrapper {
+      flex-direction: column;
+
+      .item-wrapper {
+        margin-bottom: 30px;
+      }
+    }
+  }
+}

@@ -1,0 +1,72 @@
+/**
+ *  BUTTONS
+ */
+
+
+.button {
+  display: inline-block;
+  padding: 15px 40px;
+  background: $main-color;
+  color: white;
+  text-decoration: none;
+  @include transition('all', '0.5s', 'ease');
+
+  &:hover {
+    color: white;
+    text-decoration: none;
+    transform: scale(1.1);
+  }
+
+  &:focus {
+    color: white;
+    text-decoration: none;
+  }
+
+  &.light {
+    background: $main-color-light;
+  }
+
+  &.dark {
+    background: $main-color-dark;
+  }
+
+  &.disabled {
+    cursor: default;
+    opacity: .4;
+    transform: none;
+  }
+}
+
+
+.secondary-btn {
+  background: $secondary-color;
+  color: $main-color;
+  width: 150px;
+  font-weight: 700;
+
+  &:focus {
+    outline: none;
+    box-shadow: none;
+  }
+}
+
+.main-btn {
+  background: $main-color;
+  color: white;
+  width: 150px;
+  font-weight: 700;
+
+  &.transparent {
+    background: transparent;
+    border: 2px solid $main-color;
+    color: $main-color;
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: none;
+  }
+}
+
+
+

@@ -1,0 +1,42 @@
+/**
+ *  TYPOGRAPHY
+ */
+
+
+
+
+html, body {
+  background-color: $body-bg;
+  color: $text-body;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+}
+
+
+p {
+  margin-bottom: 10px;
+}
+
+a {
+  color: $text-color;
+  text-decoration: none !important;
+
+  &:hover {
+    color: $text-color;
+  }
+
+  &:focus {
+    color: $text-color;
+  }
+}
+
+img {
+  width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: $heading-weight;
+}
