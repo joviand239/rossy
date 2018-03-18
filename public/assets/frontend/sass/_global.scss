@@ -10,6 +10,155 @@
   flex-wrap: wrap;
 }
 
+// NAVBAR
+nav.navbar {
+  padding: 5px 0px;
+
+  .navbar-brand {
+    margin-right: 50px;
+  }
+
+  .logo {
+    width: 125px;
+  }
+
+  .navbar-nav {
+
+    .nav-item {
+      padding: 5px 10px;
+
+      &.active {
+
+        .nav-link {
+          font-weight: 900;
+          border-bottom: 3px solid $secondary-color;
+        }
+      }
+    }
+
+    .nav-link {
+      padding: 5px;
+      color: $secondary-color;
+      text-transform: uppercase;
+      @include transition(all, 0.5s, ease);
+
+      &:hover {
+        font-weight: 900;
+        border-bottom: 3px solid $secondary-color;
+      }
+    }
+  }
+}
+// NAVBAR
+
+
+
+// Slider
+.slider {
+
+  .item {
+
+
+    .box {
+      @extend .display-flex;
+      background-position: center center !important;
+      background-repeat: no-repeat !important;
+      background-size: cover !important;
+      min-height: 550px;
+      align-items: flex-end;
+    }
+
+    .box-container {
+      width: 100%;
+      padding-bottom: 100px;
+    }
+
+
+    .title {
+      color: $main-color;
+      font-size: 34px;
+      text-transform: uppercase;
+      background: white;
+      padding: 5px 25px;
+      font-style: italic;
+    }
+
+    .subtitle {
+      color: white;
+    }
+
+    .text-btn {
+      @extend .display-flex;
+      align-items: center;
+      color: white;
+      font-size: 18px;
+
+      .fa {
+        font-size: 30px;
+        margin-left: 15px;
+      }
+    }
+
+  }
+}
+// Slider
+
+
+
+
+
+// FOOTER
+#footer {
+  background: $main-color;
+  padding: 20px 0px;
+  color: white;
+
+  p {
+    margin-bottom: 5px;
+  }
+
+  .list-wrapper {
+    @extend .display-flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
+  }
+
+  .list {
+    @extend .display-flex;
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+
+    .item {
+      padding: 0px 10px;
+      position: relative;
+
+      &:after {
+        content: '';
+        border-right: 1px solid;
+        position: absolute;
+        height: 15px;
+        top: 3px;
+        left: 0px;
+      }
+
+      &:first-child {
+
+        &:after {
+          border: none;
+        }
+      }
+
+
+      a {
+        color: white;
+      }
+    }
+  }
+}
+
+// FOOTER
 
 
 // RESPONSIVE

@@ -22,7 +22,7 @@
                         <div class="app-form">
                             <div class="form-header">
                                 <div class="app-brand text-center">
-                                    <img class="logo-login" src="{{ url('/') }}/assets/admin/image/logo-new.png"/><br/><br/>
+                                    <img class="logo-login" src="{{ url('/') }}/assets/admin/image/logo.png"/>
                                 </div>
                             </div>
 

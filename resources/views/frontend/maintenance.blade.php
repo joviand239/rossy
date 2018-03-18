@@ -22,7 +22,7 @@
 
 <section id="maintenance">
     <div class="container">
-        <img class="logo animated bounceInDown" src="{!! url('/') !!}/assets/frontend/images/logo.png" alt="Logo Rossy">
+        <img class="logo animated bounceInDown" src="{!! url('/') !!}/assets/frontend/images/logo-white.png" alt="Logo Rossy">
 
         <h1 class="title">COMING SOON</h1>
 

@@ -381,7 +381,7 @@
                         }
                     }
                     var $cSouter = $slide.parent();
-                    $cSouter.find('.lSPager').html(pagers);
+                    $cSouter.find('.lSPager').html(pagers); 
                     if (settings.gallery === true) {
                         if (settings.vertical === true) {
                             // set Gallery thumbnail width
@@ -454,7 +454,7 @@
                         setCss();
                         if (!interval) {
                             $this.auto();
-                        }
+                        }   
                     }else{
                         obj.find('img').on('load', function () {
                             setTimeout(function () {
@@ -615,14 +615,14 @@
             slideThumb: function () {
                 var position;
                 switch (settings.currentPagerPosition) {
-                    case 'left':
-                        position = 0;
-                        break;
-                    case 'middle':
-                        position = (elSize / 2) - (thumbWidth / 2);
-                        break;
-                    case 'right':
-                        position = elSize - thumbWidth;
+                case 'left':
+                    position = 0;
+                    break;
+                case 'middle':
+                    position = (elSize / 2) - (thumbWidth / 2);
+                    break;
+                case 'right':
+                    position = elSize - thumbWidth;
                 }
                 var sc = scene - $el.find('.clone.left').length;
                 var $pager = $slide.parent().find('.lSPager');
@@ -880,7 +880,7 @@
                 $(window).on('focus', function(){
                     $this.auto();
                 });
-
+                
                 $(window).on('blur', function(){
                     clearInterval(interval);
                 });
@@ -1083,7 +1083,7 @@
                 }
             }
             return sc + 1;
-        };
+        }; 
         $el.getTotalSlideCount = function () {
             return $slide.find('.lslide').length;
         };
@@ -1108,7 +1108,7 @@
                 $el.refresh = function(){};
                 $el.getCurrentSlideCount = function(){};
                 $el.getTotalSlideCount = function(){};
-                $el.goToSlide = function(){};
+                $el.goToSlide = function(){}; 
                 $el.lightSlider = null;
                 refresh = {
                     init : function(){}

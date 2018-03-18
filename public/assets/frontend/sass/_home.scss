@@ -1,0 +1,30 @@
+#home {
+
+  .banner {
+    position: relative;
+
+    .lSSlideOuter .lSPager.lSpg {
+      position: absolute;
+      width: 100%;
+      bottom: 15px;
+
+      &>li {
+
+        a {
+          background-color: rgba(white, .3);
+          width: 35px;
+          height: 5px;
+        }
+
+        &.active a {
+          background-color: white;
+        }
+
+        &:hover a {
+          background-color: white;
+        }
+      }
+    }
+  }
+
+}

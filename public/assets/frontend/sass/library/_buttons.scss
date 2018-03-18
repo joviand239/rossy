@@ -3,18 +3,17 @@
  */
 
 
-.button {
-  display: inline-block;
-  padding: 15px 40px;
+.btn {
+  padding: 7.5px 12.5px;
+  border-radius: 0px;
   background: $main-color;
   color: white;
   text-decoration: none;
-  @include transition('all', '0.5s', 'ease');
+  @include transition(all, 0.5s, ease);
 
   &:hover {
     color: white;
     text-decoration: none;
-    transform: scale(1.1);
   }
 
   &:focus {
@@ -35,14 +34,16 @@
     opacity: .4;
     transform: none;
   }
+
+  &.italic {
+    font-style: italic;
+  }
 }
 
 
 .secondary-btn {
   background: $secondary-color;
-  color: $main-color;
-  width: 150px;
-  font-weight: 700;
+  color: white;
 
   &:focus {
     outline: none;
