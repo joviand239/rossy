@@ -11,6 +11,11 @@
 <link rel="stylesheet" href="{{ url('/') }}/assets/frontend/library/lightslider/css/lightslider.min.css">
 <!-- Light Slider -->
 
+<!-- Slick Slider -->
+<link rel="stylesheet" href="{{ url('/') }}/assets/frontend/library/slick/css/slick.css">
+<link rel="stylesheet" href="{{ url('/') }}/assets/frontend/library/slick/css/slick-theme.css">
+<!-- Slick Slider -->
+
 
 <link rel="stylesheet" href="{{ url('/') }}/assets/frontend/css/style.css">
 

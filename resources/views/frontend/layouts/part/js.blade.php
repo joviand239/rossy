@@ -15,6 +15,10 @@
 <script src="{{ url('/') }}/assets/frontend/library/lightslider/js/lightslider.min.js"></script>
 <!-- Light Slider -->
 
+<!-- Slick Slider -->
+<script src="{{ url('/') }}/assets/frontend/library/slick/js/slick.min.js"></script>
+<!-- Slick Slider -->
+
 
 
 <script src="{{ url('/') }}/assets/frontend/js/script.js"></script>

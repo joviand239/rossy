@@ -19,6 +19,7 @@
   &:focus {
     color: white;
     text-decoration: none;
+    outline: none;
   }
 
   &.light {
@@ -69,5 +70,48 @@
   }
 }
 
+
+.transparent-btn {
+  background: transparent;
+  border: 1px solid;
+
+  &:hover {
+    background: $third-color;
+    color: $main-color;
+  }
+}
+
+.third-btn {
+  background: $third-color;
+  color: $main-color;
+
+  &:hover {
+    background: $main-color;
+    color: white;
+  }
+}
+
+.text-btn {
+  @extend .display-flex;
+  align-items: center;
+  color: $main-color;
+  font-size: 18px;
+  font-weight: 700;
+  @include transition(all, 0.5s, ease);
+
+  &:hover {
+    color: $main-color;
+
+    .fa {
+      margin-left: 30px;
+    }
+  }
+
+  .fa {
+    font-size: 30px;
+    margin-left: 15px;
+    @include transition(all, 0.5s, ease);
+  }
+}
 
 

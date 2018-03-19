@@ -1,3 +1,27 @@
+<div class="socmed-section">
+
+    <div class="container">
+
+        <h1 class="name">@rossy_bakery_supplier</h1>
+
+        <div class="socmed-wrapper">
+
+
+            <a href="#" class="circle">
+                <i class="fa fa-facebook"></i>
+            </a>
+
+            <a href="#" class="circle">
+                <i class="fa fa-instagram"></i>
+            </a>
+
+
+        </div>
+
+    </div>
+
+</div>
+
 <footer id="footer">
 
     <div class="container">

@@ -62,7 +62,8 @@ h1, h2, h3, h4, h5, h6 {
     text-decoration: none; }
   .btn:focus {
     color: white;
-    text-decoration: none; }
+    text-decoration: none;
+    outline: none; }
   .btn.light {
     background: #87163c; }
   .btn.dark {
@@ -93,6 +94,41 @@ h1, h2, h3, h4, h5, h6 {
   .main-btn:focus {
     outline: none;
     box-shadow: none; }
+
+.transparent-btn {
+  background: transparent;
+  border: 1px solid; }
+  .transparent-btn:hover {
+    background: #efddac;
+    color: #680e28; }
+
+.third-btn {
+  background: #efddac;
+  color: #680e28; }
+  .third-btn:hover {
+    background: #680e28;
+    color: white; }
+
+.text-btn {
+  align-items: center;
+  color: #680e28;
+  font-size: 18px;
+  font-weight: 700;
+  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease; }
+  .text-btn:hover {
+    color: #680e28; }
+    .text-btn:hover .fa {
+      margin-left: 30px; }
+  .text-btn .fa {
+    font-size: 30px;
+    margin-left: 15px;
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease; }
 
 /*!
  * Waves v0.6.0
@@ -180,7 +216,7 @@ h1, h2, h3, h4, h5, h6 {
 .waves-effect .waves-ripple {
   z-index: -1; }
 
-.display-flex, .slider .item .box, .slider .item .text-btn, #footer .list-wrapper, #footer .list {
+.display-flex, .text-btn, .slider .item .box, .slider .item .text-btn, .socmed-section .socmed-wrapper, .socmed-section .circle, #footer .list-wrapper, #footer .list, .card-product .size-list, .card-blog, .card-blog .btn-wrapper, .card-cta .circle-wrapper, #home .course-wrapper .course-detail-slider .slick-slide .button-wrapper {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -236,6 +272,41 @@ nav.navbar {
     font-size: 30px;
     margin-left: 15px; }
 
+.socmed-section {
+  padding: 70px 0px;
+  background: #efddac;
+  text-align: center; }
+  .socmed-section .name {
+    color: #680e28;
+    font-weight: 900;
+    font-size: 26px;
+    margin-bottom: 50px; }
+  .socmed-section .socmed-wrapper {
+    align-items: center;
+    justify-content: space-evenly; }
+  .socmed-section .circle {
+    width: 200px;
+    height: 200px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 1px solid #680e28;
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease; }
+    .socmed-section .circle:hover {
+      background: #680e28; }
+      .socmed-section .circle:hover .fa {
+        color: #efddac; }
+    .socmed-section .circle .fa {
+      font-size: 75px;
+      color: #680e28;
+      transition: all 0.5s ease;
+      -webkit-transition: all 0.5s ease;
+      -moz-transition: all 0.5s ease;
+      -o-transition: all 0.5s ease; }
+
 #footer {
   background: #680e28;
   padding: 20px 0px;
@@ -265,6 +336,114 @@ nav.navbar {
       #footer .list .item a {
         color: white; }
 
+.card-product {
+  text-align: center;
+  margin-bottom: 40px; }
+  .card-product .image-wrapper {
+    border: 1px solid rgba(211, 174, 72, 0.2);
+    padding: 15px;
+    margin-bottom: 10px;
+    overflow: hidden; }
+    .card-product .image-wrapper .thumbnail {
+      transition: all 0.5s ease;
+      -webkit-transition: all 0.5s ease;
+      -moz-transition: all 0.5s ease;
+      -o-transition: all 0.5s ease; }
+      .card-product .image-wrapper .thumbnail:hover {
+        transform: scale(1.1); }
+  .card-product .name {
+    display: block;
+    font-size: 16px;
+    font-weight: 700;
+    color: #d3ae48;
+    margin-bottom: 10px; }
+  .card-product .size-list {
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    color: #d3ae48; }
+    .card-product .size-list .item {
+      padding: 0px 7px;
+      border-right: 1px solid; }
+      .card-product .size-list .item:last-of-type {
+        border-right: none; }
+
+.card-blog {
+  background: white;
+  align-items: center;
+  margin-right: 75px;
+  cursor: pointer;
+  width: 500px;
+  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease; }
+  .card-blog .thumb-wrapper {
+    width: 40%; }
+  .card-blog .detail-wrapper {
+    width: 60%;
+    padding: 15px 25px; }
+  .card-blog .tag {
+    font-size: 18px;
+    font-weight: 900;
+    color: #680e28; }
+  .card-blog .date {
+    color: #d3ae48; }
+  .card-blog .title {
+    display: block;
+    margin-bottom: 30px; }
+  .card-blog .btn-wrapper {
+    justify-content: flex-end; }
+  .card-blog .text-btn {
+    font-size: 12px;
+    color: #b7b7b7; }
+    .card-blog .text-btn .fa {
+      font-size: 14px; }
+
+.card-cta {
+  position: relative;
+  margin-bottom: 20px; }
+  .card-cta .circle-wrapper {
+    position: relative;
+    width: 130px;
+    height: 130px;
+    margin: auto;
+    margin-top: -50px;
+    align-items: center;
+    justify-content: center;
+    background: #efddac;
+    border-radius: 50%; }
+    .card-cta .circle-wrapper .icon {
+      width: 75px; }
+  .card-cta .detail-wrapper {
+    display: block;
+    background: #87163c;
+    padding: 20px 20%;
+    padding-top: 70px;
+    text-align: center;
+    color: white;
+    margin-top: -60px;
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease; }
+    .card-cta .detail-wrapper:hover {
+      background: #efddac;
+      color: #87163c; }
+      .card-cta .detail-wrapper:hover .custom-line {
+        border-color: #87163c; }
+    .card-cta .detail-wrapper .custom-line {
+      border-color: white;
+      width: 240px;
+      margin: 20px auto;
+      transition: all 0.5s ease;
+      -webkit-transition: all 0.5s ease;
+      -moz-transition: all 0.5s ease;
+      -o-transition: all 0.5s ease; }
+
 .select2-container--default .select2-selection--single {
   padding: 10px 20px;
   height: auto;
@@ -282,6 +461,41 @@ nav.navbar {
 .select2-container--default .select2-selection--single .select2-selection__arrow {
   height: 100%; }
 
+.slick-slide:focus {
+  outline: none; }
+
+.slick-dots {
+  bottom: -50px; }
+  .slick-dots li {
+    background: rgba(255, 255, 255, 0.5);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%; }
+    .slick-dots li.slick-active {
+      background: #d3ae48; }
+
+.default-section {
+  padding: 50px 0px; }
+
+.gray-section {
+  background: #ebe5d8; }
+
+.default-title {
+  font-size: 40px;
+  color: #680e28; }
+  .default-title.secondary {
+    color: #d3ae48; }
+  .default-title.white {
+    color: white; }
+
+.default-subtitle {
+  font-size: 28px;
+  font-weight: 900; }
+
+.default-summary {
+  font-size: 16px;
+  line-height: 40px; }
+
 #home .banner {
   position: relative; }
   #home .banner .lSSlideOuter .lSPager.lSpg {
@@ -296,5 +510,104 @@ nav.navbar {
       background-color: white; }
     #home .banner .lSSlideOuter .lSPager.lSpg > li:hover a {
       background-color: white; }
+  #home .banner .lSAction > a {
+    background: none;
+    width: auto;
+    height: auto;
+    top: 45%; }
+    #home .banner .lSAction > a.lSPrev {
+      left: 30px; }
+    #home .banner .lSAction > a.lSNext {
+      right: 30px; }
+    #home .banner .lSAction > a .custom-prev-html, #home .banner .lSAction > a .custom-next-html {
+      display: block;
+      font-size: 70px;
+      color: white; }
+#home .course-wrapper .top-wrapper {
+  padding: 20px 0px;
+  background: #680e28;
+  color: white; }
+#home .course-wrapper .bottom-wrapper {
+  padding: 40px 0px 0px;
+  background: #87163c;
+  color: white; }
+#home .course-wrapper .container.small {
+  width: 40%;
+  margin: auto; }
+  @media (max-width: 480px) {
+    #home .course-wrapper .container.small {
+      width: 85%; } }
+#home .course-wrapper .course-date-slider .slick-slide {
+  text-align: center;
+  cursor: pointer;
+  padding: 0px 30px;
+  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease; }
+  #home .course-wrapper .course-date-slider .slick-slide.slick-center h3 {
+    transform: scale(1.4);
+    opacity: 1; }
+  #home .course-wrapper .course-date-slider .slick-slide:focus {
+    outline: none; }
+  #home .course-wrapper .course-date-slider .slick-slide h3 {
+    font-size: 12px;
+    opacity: 0.5;
+    margin-bottom: 0px;
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease; }
+#home .course-wrapper .course-detail-slider {
+  font-family: 'Open Sans', 'sans-serif'; }
+  #home .course-wrapper .course-detail-slider .slick-slide:focus {
+    outline: none; }
+  #home .course-wrapper .course-detail-slider .slick-slide .wrapper {
+    position: relative;
+    margin-left: 50px;
+    margin-bottom: 20px; }
+    #home .course-wrapper .course-detail-slider .slick-slide .wrapper:after {
+      content: '';
+      position: absolute;
+      height: 75px;
+      width: 2px;
+      margin: 0px;
+      top: 0px;
+      right: -15px;
+      border-right: 1px solid rgba(255, 255, 255, 0.5); }
+  #home .course-wrapper .course-detail-slider .slick-slide .title {
+    margin-bottom: 0px; }
+  #home .course-wrapper .course-detail-slider .slick-slide .icon {
+    position: absolute;
+    width: 25px;
+    left: -40px; }
+  #home .course-wrapper .course-detail-slider .slick-slide .button-wrapper {
+    justify-content: space-between;
+    margin-top: 25px; }
+    #home .course-wrapper .course-detail-slider .slick-slide .button-wrapper .btn {
+      padding: 15px 25px;
+      font-size: 15px;
+      font-weight: 700;
+      margin-bottom: 15px; }
+#home .about-wrapper {
+  padding-top: 75px; }
+#home .blog-wrapper {
+  padding: 50px 0px;
+  background-position: center center !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important; }
+  #home .blog-wrapper .slick-prev, #home .blog-wrapper .slick-next {
+    z-index: 100; }
+    #home .blog-wrapper .slick-prev:before, #home .blog-wrapper .slick-next:before {
+      font-size: 40px;
+      color: #d3ae48; }
+  #home .blog-wrapper .slick-prev {
+    left: 10px; }
+  #home .blog-wrapper .slick-next {
+    right: 30px; }
+  #home .blog-wrapper .slick-list {
+    overflow: unset; }
+  #home .blog-wrapper .slick-slide.slick-center .card-blog {
+    transform: scale(1.1); }
 
 /*# sourceMappingURL=style.css.map */

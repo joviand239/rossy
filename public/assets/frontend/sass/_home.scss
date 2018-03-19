@@ -25,6 +25,184 @@
         }
       }
     }
+
+    .lSAction>a {
+      background: none;
+      width: auto;
+      height: auto;
+      top: 45%;
+
+      &.lSPrev {
+        left: 30px;
+      }
+
+      &.lSNext {
+        right: 30px;
+      }
+
+      .custom-prev-html, .custom-next-html {
+        display: block;
+        font-size: 70px;
+        color: white;
+      }
+    }
+  }
+
+
+  .course-wrapper {
+
+    .top-wrapper {
+      padding: 20px 0px;
+      background: $main-color;
+      color: white;
+    }
+
+    .bottom-wrapper {
+      padding: 40px 0px 0px;
+      background: $main-color-light;
+      color: white;
+    }
+
+    .container {
+
+      &.small {
+        width: 40%;
+        margin: auto;
+
+        @include breakpoint('breakpoint-sm', 'max-width'){
+          width: 85%;
+        }
+      }
+    }
+
+    .course-date-slider {
+
+      .slick-slide {
+        text-align: center;
+        cursor: pointer;
+        padding: 0px 30px;
+        @include transition(all, 0.5s, ease);
+
+        &.slick-center {
+
+          h3 {
+            transform: scale(1.4);
+            opacity: 1;
+          }
+        }
+
+        &:focus {
+          outline: none;
+        }
+
+        h3 {
+          font-size: 12px;
+          opacity: 0.5;
+          margin-bottom: 0px;
+          @include transition(all, 0.5s, ease);
+
+        }
+      }
+    }
+
+
+
+    .course-detail-slider {
+      font-family: 'Open Sans', 'sans-serif';
+
+      .slick-slide {
+
+        &:focus {
+          outline: none;
+        }
+
+
+        .wrapper {
+          position: relative;
+          margin-left: 50px;
+          margin-bottom: 20px;
+
+          &:after {
+            content: '';
+            position: absolute;
+            height: 75px;
+            width: 2px;
+            margin: 0px;
+            top: 0px;
+            right: -15px;
+            border-right: 1px solid rgba(white, .5s);
+          }
+        }
+
+        .title {
+          margin-bottom: 0px;
+        }
+
+        .icon {
+          position: absolute;
+          width: 25px;
+          left: -40px;
+        }
+
+
+        .button-wrapper {
+          @extend .display-flex;
+          justify-content: space-between;
+          margin-top: 25px;
+
+          .btn {
+            padding: 15px 25px;
+            font-size: 15px;
+            font-weight: 700;
+            margin-bottom: 15px;
+          }
+        }
+
+      }
+
+    }
+
+  }
+
+  .about-wrapper {
+    padding-top: 75px;
+  }
+
+  .blog-wrapper {
+    padding: 50px 0px;
+    background-position: center center !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+
+    .slick-prev, .slick-next {
+      z-index: 100;
+
+      &:before {
+        font-size: 40px;
+        color: $secondary-color;
+      }
+    }
+
+    .slick-prev {
+      left: 10px;
+    }
+
+    .slick-next {
+      right: 30px;
+    }
+
+    .slick-list {
+      overflow: unset;
+    }
+
+    .slick-slide {
+
+      &.slick-center {
+        .card-blog {
+          transform: scale(1.1);
+        }
+      }
+    }
   }
 
 }

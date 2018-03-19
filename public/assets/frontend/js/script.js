@@ -5,11 +5,42 @@ $(document).ready(function () {
         item: 1,
         loop: true,
         adaptiveHeight: true,
-        auto: false,
+        auto: true,
         pause: 5000,
-        pauseOnHover: true,
+        prevHtml : '<span class="custom-prev-html"><i class="fa fa-angle-left"></i></span>',
+        nextHtml : '<span class="custom-next-html"><i class="fa fa-angle-right"></i></span>',
     });
 
+    $('.course-date-slider').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        asNavFor: '.course-detail-slider',
+        dots: false,
+        centerMode: true,
+        focusOnSelect: true,
+        variableWidth: true
+    });
+
+
+    $('.course-detail-slider').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        fade: true,
+        asNavFor: '.course-date-slider'
+    });
+
+    $('.blog-slider').slick({
+        centerPadding: '60px',
+        dots: true,
+        arrows: true,
+        infinite: false,
+        speed: 500,
+        slidesToShow: 3,
+        centerMode: true,
+        focusOnSelect: true,
+        variableWidth: true
+    });
 
 
     $('.custom-select').select2();

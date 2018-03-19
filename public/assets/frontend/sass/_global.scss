@@ -104,7 +104,52 @@ nav.navbar {
 // Slider
 
 
+// Socmed Sectionn
+.socmed-section {
+  padding: 70px 0px;
+  background: $third-color;
+  text-align: center;
 
+  .name {
+    color: $main-color;
+    font-weight: 900;
+    font-size: 26px;
+    margin-bottom: 50px;
+  }
+
+  .socmed-wrapper {
+    @extend .display-flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  .circle {
+    @extend .display-flex;
+    width: 200px;
+    height: 200px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 1px solid $main-color;
+    @include transition(all, 0.5s, ease);
+
+    &:hover {
+      background: $main-color;
+
+      .fa {
+        color: $third-color;
+      }
+    }
+
+    .fa {
+      font-size: 75px;
+      color: $main-color;
+      @include transition(all, 0.5s, ease);
+    }
+  }
+}
+
+// Socmed Section
 
 
 // FOOTER
@@ -159,6 +204,157 @@ nav.navbar {
 }
 
 // FOOTER
+
+
+
+.card-product {
+  text-align: center;
+  margin-bottom: 40px;
+
+  .image-wrapper {
+    border: 1px solid rgba($secondary-color, .2);
+    padding: 15px;
+    margin-bottom: 10px;
+    overflow: hidden;
+
+    .thumbnail {
+      @include transition(all, 0.5s, ease);
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  .name {
+    display: block;
+    font-size: 16px;
+    font-weight: 700;
+    color: $secondary-color;
+    margin-bottom: 10px;
+  }
+
+  .size-list {
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+    @extend .display-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    color: $secondary-color;
+
+    .item {
+      padding: 0px 7px;
+      border-right: 1px solid;
+
+      &:last-of-type {
+        border-right: none;
+      }
+    }
+  }
+}
+
+
+
+.card-blog {
+  @extend .display-flex;
+  background: white;
+  align-items: center;
+  margin-right: 75px;
+  cursor: pointer;
+  width: 500px;
+  @include transition(all, 0.5s, ease);
+
+  .thumb-wrapper {
+    width: 40%;
+  }
+
+  .detail-wrapper {
+    width: 60%;
+    padding: 15px 25px;
+  }
+
+  .tag {
+    font-size: 18px;
+    font-weight: 900;
+    color: $main-color;
+  }
+
+  .date {
+    color: $secondary-color;
+  }
+
+  .title {
+    display: block;
+    margin-bottom: 30px;
+  }
+
+  .btn-wrapper {
+    @extend .display-flex;
+    justify-content: flex-end;
+  }
+
+  .text-btn {
+    font-size: 12px;
+    color: #b7b7b7;
+
+    .fa {
+      font-size: 14px;
+    }
+  }
+
+}
+
+
+.card-cta {
+  position: relative;
+  margin-bottom: 20px;
+
+  .circle-wrapper {
+    @extend .display-flex;
+    position: relative;
+    width: 130px;
+    height: 130px;
+    margin: auto;
+    margin-top: -50px;
+    align-items: center;
+    justify-content: center;
+    background: $third-color;
+    border-radius: 50%;
+
+    .icon {
+      width: 75px;
+    }
+  }
+
+  .detail-wrapper {
+    display: block;
+    background: $main-color-light;
+    padding: 20px 20%;
+    padding-top: 70px;
+    text-align: center;
+    color: white;
+    margin-top: -60px;
+    @include transition(all, 0.5s, ease);
+
+    &:hover {
+      background: $third-color;
+      color: $main-color-light;
+
+      .custom-line {
+        border-color: $main-color-light;
+      }
+    }
+
+    .custom-line {
+      border-color: white;
+      width: 240px;
+      margin: 20px auto;
+      @include transition(all, 0.5s, ease);
+    }
+  }
+}
 
 
 // RESPONSIVE
