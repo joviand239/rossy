@@ -14,6 +14,7 @@ $(document).ready(function () {
     $('.course-date-slider').slick({
         slidesToShow: 3,
         slidesToScroll: 1,
+        infinite: false,
         asNavFor: '.course-detail-slider',
         dots: false,
         centerMode: true,
@@ -25,6 +26,7 @@ $(document).ready(function () {
     $('.course-detail-slider').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
+        infinite: false,
         arrows: false,
         fade: true,
         asNavFor: '.course-date-slider'

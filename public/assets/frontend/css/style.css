@@ -15,6 +15,10 @@
  */
 @import url("https://fonts.googleapis.com/css?family=Roboto:300,400,700");
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600,700");
+@import url("https://fonts.googleapis.com/css?family=Bree+Serif");
+@font-face {
+  font-family: 'AleoLight';
+  src: url("../../fonts/AleoLight.otf"); }
 /**
  *  TYPOGRAPHY
  */
@@ -28,7 +32,8 @@ html, body {
   font-size: 14px; }
 
 p {
-  margin-bottom: 10px; }
+  margin-bottom: 10px;
+  font-size: 14px; }
 
 a {
   color: #4d4d4f;
@@ -67,7 +72,7 @@ h1, h2, h3, h4, h5, h6 {
   .btn.light {
     background: #87163c; }
   .btn.dark {
-    background: #c8282d; }
+    background: #781b38; }
   .btn.disabled {
     cursor: default;
     opacity: .4;
@@ -216,7 +221,7 @@ h1, h2, h3, h4, h5, h6 {
 .waves-effect .waves-ripple {
   z-index: -1; }
 
-.display-flex, .text-btn, .slider .item .box, .slider .item .text-btn, .socmed-section .socmed-wrapper, .socmed-section .circle, #footer .list-wrapper, #footer .list, .card-product .size-list, .card-blog, .card-blog .btn-wrapper, .card-cta .circle-wrapper, #home .course-wrapper .course-detail-slider .slick-slide .button-wrapper {
+.display-flex, .text-btn, .slider .item .box, .slider .item .text-btn, .socmed-section .socmed-wrapper, .socmed-section .circle, #footer .list-wrapper, #footer .list, .card-product .size-list, .card-blog, .card-blog .btn-wrapper, .card-cta .circle-wrapper, .default-banner, #home .course-wrapper .course-detail-slider .slick-slide .button-wrapper, #about .nav, #about .nav .nav-link {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -444,6 +449,20 @@ nav.navbar {
       -moz-transition: all 0.5s ease;
       -o-transition: all 0.5s ease; }
 
+.default-banner {
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important; }
+  .default-banner .banner-wrapper {
+    text-align: center;
+    color: white;
+    padding: 75px 0px; }
+  .default-banner .title {
+    font-family: 'Bree Serif', serif;
+    font-size: 42px; }
+  .default-banner .subtitle {
+    font-size: 22px; }
+
 .select2-container--default .select2-selection--single {
   padding: 10px 20px;
   height: auto;
@@ -482,7 +501,9 @@ nav.navbar {
 
 .default-title {
   font-size: 40px;
-  color: #680e28; }
+  color: #781b38;
+  margin-bottom: 30px;
+  font-family: 'AleoLight'; }
   .default-title.secondary {
     color: #d3ae48; }
   .default-title.white {
@@ -494,7 +515,13 @@ nav.navbar {
 
 .default-summary {
   font-size: 16px;
-  line-height: 40px; }
+  line-height: 34px; }
+
+.container.small {
+  width: 65%; }
+  @media (max-width: 480px) {
+    .container.small {
+      width: auto; } }
 
 #home .banner {
   position: relative; }
@@ -609,5 +636,80 @@ nav.navbar {
     overflow: unset; }
   #home .blog-wrapper .slick-slide.slick-center .card-blog {
     transform: scale(1.1); }
+
+#about .advantage-wrapper {
+  text-align: center;
+  margin-bottom: 30px; }
+  #about .advantage-wrapper .icon {
+    width: 100px;
+    margin-bottom: 30px; }
+  #about .advantage-wrapper .name {
+    color: #7c7c7c; }
+#about .chef-wrapper {
+  position: relative;
+  width: 250px;
+  margin: auto;
+  overflow: hidden;
+  margin-bottom: 30px; }
+  #about .chef-wrapper:hover .overlay {
+    background: transparent; }
+  #about .chef-wrapper:hover .chef-link {
+    bottom: 0px; }
+  #about .chef-wrapper .overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background: rgba(0, 0, 0, 0.5);
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease; }
+  #about .chef-wrapper .chef-link {
+    position: absolute;
+    bottom: -100px;
+    font-size: 24px;
+    color: white;
+    font-weight: 600;
+    display: block;
+    padding: 5px 20px;
+    background: #0000007d;
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease; }
+#about .nav {
+  margin-bottom: 50px;
+  border: none;
+  font-size: 14px;
+  width: 100%;
+  align-items: center;
+  justify-content: center; }
+  #about .nav .nav-link {
+    padding: 0px;
+    margin: 0px 15px;
+    width: 60px;
+    height: 60px;
+    border: 1px solid #d3ae48;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease; }
+    #about .nav .nav-link.active {
+      background: #d3ae48;
+      color: white; }
+    #about .nav .nav-link:hover {
+      background: #d3ae48;
+      color: white; }
+#about .tab-content {
+  text-align: center;
+  width: 50%;
+  margin: auto; }
+  @media (max-width: 480px) {
+    #about .tab-content {
+      width: 100%; } }
 
 /*# sourceMappingURL=style.css.map */

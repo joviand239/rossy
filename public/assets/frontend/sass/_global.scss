@@ -357,6 +357,30 @@ nav.navbar {
 }
 
 
+
+.default-banner {
+  @extend .display-flex;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+
+  .banner-wrapper {
+    text-align: center;
+    color: white;
+    padding: 75px 0px;
+  }
+
+  .title {
+    font-family: 'Bree Serif', serif;
+    font-size: 42px;
+  }
+
+  .subtitle {
+    font-size: 22px;
+  }
+}
+
+
 // RESPONSIVE
 @media screen and (max-width: 480px) {
 

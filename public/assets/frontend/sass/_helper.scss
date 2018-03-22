@@ -51,7 +51,9 @@
 
 .default-title {
   font-size: 40px;
-  color: $main-color;
+  color: $main-color-dark;
+  margin-bottom: 30px;
+  font-family: 'AleoLight';
 
   &.secondary {
     color: $secondary-color;
@@ -69,5 +71,15 @@
 
 .default-summary {
   font-size: 16px;
-  line-height: 40px;
+  line-height: 34px;
+}
+
+.container {
+  &.small {
+    width: 65%;
+
+    @include breakpoint('breakpoint-sm', 'max-width'){
+      width: auto;
+    }
+  }
 }

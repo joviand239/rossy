@@ -10,13 +10,13 @@
         <div class="collapse navbar-collapse" id="navbarsExample07">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Home</a>
+                    <a class="nav-link" href="{!! route('home') !!}">Home</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Product</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">About Us</a>
+                    <a class="nav-link" href="{!! route('about') !!}">About Us</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Blog</a>
