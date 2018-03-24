@@ -10,7 +10,7 @@
 
         <div class="default-banner" style="background: url({!! url('/') !!}/assets/frontend/images/banner-page.jpg)">
             <div class="container banner-wrapper">
-                <h1 class="title">About Us</h1>
+                <h1 class="title">ABOUT US</h1>
                 <h2 class="subtitle">Know more about Rossy and the people behind it.</h2>
             </div>
         </div>

@@ -41,6 +41,8 @@ Route::get('/home', 'Frontend\HomeController@index')->name('home');
 
 Route::get('/about', 'Frontend\AboutController@index')->name('about');
 
+Route::get('/product/{type?}', 'Frontend\ProductController@index')->name('product');
+
 
 
 
