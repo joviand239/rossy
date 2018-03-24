@@ -43,6 +43,8 @@ Route::get('/about', 'Frontend\AboutController@index')->name('about');
 
 Route::get('/product/{type?}', 'Frontend\ProductController@index')->name('product');
 
+Route::get('/product/{type?}/detail/{url?}', 'Frontend\ProductController@getDetail')->name('product-detail');
+
 
 
 

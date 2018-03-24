@@ -67,6 +67,14 @@
 .default-subtitle {
   font-size: 28px;
   font-weight: 900;
+
+  &.small {
+    font-size: 21px;
+  }
+
+  &.secondary {
+    color: $secondary-color;
+  }
 }
 
 .default-summary {
@@ -82,4 +90,42 @@
       width: auto;
     }
   }
+}
+
+
+
+.gplus-hover {
+  @include transition(all, 0.5s, ease);
+
+  &:hover {
+    color: $googleplus;
+  }
+}
+
+.fb-hover {
+  @include transition(all, 0.5s, ease);
+
+  &:hover {
+    color: $fb;
+  }
+}
+
+.ig-hover {
+  @include transition(all, 0.5s, ease);
+
+  &:hover {
+    color: $instagram;
+  }
+}
+
+.twitter-hover {
+  @include transition(all, 0.5s, ease);
+
+  &:hover {
+    color: $tw;
+  }
+}
+
+.bold {
+  font-weight: 900;
 }

@@ -221,7 +221,7 @@ h1, h2, h3, h4, h5, h6 {
 .waves-effect .waves-ripple {
   z-index: -1; }
 
-.display-flex, .text-btn, .slider .item .box, .slider .item .text-btn, .socmed-section .socmed-wrapper, .socmed-section .circle, #footer .list-wrapper, #footer .list, .card-product .size-list, .card-blog, .card-blog .btn-wrapper, .card-cta .circle-wrapper, .default-banner, #home .course-wrapper .course-detail-slider .slick-slide .button-wrapper, #product .nav-product, #product .nav-product-tag, #about .nav, #about .nav .nav-link {
+.display-flex, .text-btn, .slider .item .box, .slider .item .text-btn, .socmed-section .socmed-wrapper, .socmed-section .circle, #footer .list-wrapper, #footer .list, .card-product .size-list, .card-blog, .card-blog .btn-wrapper, .card-cta .circle-wrapper, .default-banner, #home .course-wrapper .course-detail-slider .slick-slide .button-wrapper, #product .nav-product, #product .nav-product-tag, #product .share-wrapper, #product .size-wrapper, #about .nav, #about .nav .nav-link {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -229,7 +229,8 @@ h1, h2, h3, h4, h5, h6 {
   flex-wrap: wrap; }
 
 nav.navbar {
-  padding: 5px 0px; }
+  padding: 5px 0px;
+  box-shadow: 0px 2px 20px 0px #cbcbcb; }
   nav.navbar .navbar-brand {
     margin-right: 50px; }
   nav.navbar .logo {
@@ -463,6 +464,22 @@ nav.navbar {
   .default-banner .subtitle {
     font-size: 22px; }
 
+.book-cta-wrapper {
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  text-align: center;
+  color: white;
+  padding: 75px 0px; }
+  .book-cta-wrapper .title {
+    margin-bottom: 30px;
+    font-weight: 600; }
+  .book-cta-wrapper .third-btn {
+    font-size: 16px;
+    font-weight: 700;
+    width: 275px;
+    padding: 15px; }
+
 .select2-container--default .select2-selection--single {
   padding: 10px 20px;
   height: auto;
@@ -512,6 +529,10 @@ nav.navbar {
 .default-subtitle {
   font-size: 28px;
   font-weight: 900; }
+  .default-subtitle.small {
+    font-size: 21px; }
+  .default-subtitle.secondary {
+    color: #d3ae48; }
 
 .default-summary {
   font-size: 16px;
@@ -522,6 +543,41 @@ nav.navbar {
   @media (max-width: 480px) {
     .container.small {
       width: auto; } }
+
+.gplus-hover {
+  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease; }
+  .gplus-hover:hover {
+    color: #d73d32; }
+
+.fb-hover {
+  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease; }
+  .fb-hover:hover {
+    color: #3b59b6; }
+
+.ig-hover {
+  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease; }
+  .ig-hover:hover {
+    color: #4e433c; }
+
+.twitter-hover {
+  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease; }
+  .twitter-hover:hover {
+    color: #4099ff; }
+
+.bold {
+  font-weight: 900; }
 
 #home .banner {
   position: relative; }
@@ -673,6 +729,51 @@ nav.navbar {
       -webkit-transition: all 0.5s ease;
       -moz-transition: all 0.5s ease;
       -o-transition: all 0.5s ease; }
+#product .share-wrapper {
+  padding: 0px;
+  margin: 0px;
+  list-style: none;
+  margin-bottom: 30px;
+  font-size: 20px; }
+  #product .share-wrapper .item {
+    margin-right: 20px; }
+#product .size-wrapper {
+  padding: 0px;
+  margin: 0px;
+  list-style: none; }
+  #product .size-wrapper .item {
+    cursor: pointer;
+    padding: 5px 10px;
+    margin-right: 10px;
+    border: 1px solid;
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease; }
+    #product .size-wrapper .item:hover {
+      background: #d3ae48;
+      border-color: #d3ae48;
+      color: white; }
+    #product .size-wrapper .item.active {
+      background: #d3ae48;
+      border-color: #d3ae48;
+      color: white; }
+#product .product-name {
+  font-size: 42px;
+  color: #87163c;
+  margin-bottom: 0px; }
+#product .price-wrapper {
+  background: #f4eedf;
+  padding: 10px 20px;
+  font-weight: 700; }
+  #product .price-wrapper label {
+    margin-bottom: 0px;
+    font-size: 16px;
+    color: #9f7d5b; }
+  #product .price-wrapper .price {
+    color: #87163c;
+    font-size: 26px;
+    margin-bottom: 0px; }
 
 #about .advantage-wrapper {
   text-align: center;

@@ -95,6 +95,7 @@
                         </a>
                     </li>
                 </ul>
+
                 <div class="row">
                     @for($i = 0 ; $i < 8 ; $i++)
                         <div class="col-md-3 col-12">

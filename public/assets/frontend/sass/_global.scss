@@ -13,6 +13,7 @@
 // NAVBAR
 nav.navbar {
   padding: 5px 0px;
+  box-shadow: 0px 2px 20px 0px #cbcbcb;
 
   .navbar-brand {
     margin-right: 50px;
@@ -377,6 +378,28 @@ nav.navbar {
 
   .subtitle {
     font-size: 22px;
+  }
+}
+
+
+.book-cta-wrapper {
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  text-align: center;
+  color: white;
+  padding: 75px 0px;
+
+  .title {
+    margin-bottom: 30px;
+    font-weight: 600;
+  }
+
+  .third-btn {
+    font-size: 16px;
+    font-weight: 700;
+    width: 275px;
+    padding: 15px;
   }
 }
 

@@ -45,9 +45,25 @@ $(document).ready(function () {
     });
 
 
-    $('.custom-select').select2();
+    /*$('.custom-select').select2();*/
 
 
+
+    // Product Gallery Slider
+    $('#productGallery').lightSlider({
+        gallery:true,
+        item:1,
+        loop:true,
+        thumbItem:9,
+        slideMargin:0,
+        enableDrag: false,
+        currentPagerPosition:'left',
+        onSliderLoad: function(el) {
+            el.lightGallery({
+                selector: '#productGallery .lslide'
+            });
+        }
+    });
 
 });
 
