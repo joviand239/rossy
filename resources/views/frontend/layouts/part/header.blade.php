@@ -26,7 +26,7 @@
                 </li>
             </ul>
             <form class="form-inline my-2 my-md-0">
-                <a href="#" class="btn secondary-btn italic">CONTACT US</a>
+                <a href="{!! route('contact') !!}" class="btn secondary-btn italic">CONTACT US</a>
             </form>
         </div>
     </div>

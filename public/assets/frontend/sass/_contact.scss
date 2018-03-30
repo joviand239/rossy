@@ -1,0 +1,65 @@
+#contact {
+
+
+  .form-group {
+    margin-bottom: 35px;
+    position: relative;
+  }
+
+
+  .info-wrapper {
+
+    .label {
+      font-size: 14px;
+      color: #947b37;
+      font-weight: 700;
+      margin-bottom: 0px;
+    }
+
+    p {
+      margin-bottom: 20px;
+    }
+  }
+
+  .partner-wrapper {
+    @extend .display-flex;
+    align-items: center;
+    width: 70%;
+    margin: auto;
+
+    @include breakpoint('breakpoint-sm', 'max-width'){
+      width: 90%;
+    }
+
+    .partner-card {
+      position: relative;
+      padding: 15px;
+      width: 50%;
+
+      @include breakpoint('breakpoint-sm', 'max-width'){
+        width: 100%;
+      }
+
+      .name {
+        color: $main-color;
+        font-weight: 700;
+        font-size: 16px;
+        margin-bottom: 15px;
+      }
+
+      p {
+        margin-bottom: 0px;
+      }
+
+      .text-btn {
+        position: absolute;
+        right: 15px;
+        bottom: 15px;
+
+        &.small {
+          font-size: 11px;
+        }
+      }
+    }
+  }
+}

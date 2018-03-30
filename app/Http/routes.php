@@ -55,6 +55,8 @@ Route::get('/blog', 'Frontend\BlogController@index')->name('blog');
 
 Route::get('/blog/detail/{url?}', 'Frontend\BlogController@getDetail')->name('blog-detail');
 
+Route::get('/contact-us', 'Frontend\ContactController@index')->name('contact');
+
 
 
 
