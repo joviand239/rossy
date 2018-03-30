@@ -91,7 +91,7 @@
 
                     </div>
                     <div class="col-md-3 col-12">
-                        <div class="price-wrapper">
+                        <div class="side-wrapper">
                             <label>PRICE</label>
                             <p class="price">Rp. 800.000,-</p>
                         </div>

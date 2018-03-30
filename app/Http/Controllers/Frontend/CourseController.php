@@ -23,4 +23,9 @@ class CourseController extends FrontendController {
 
         return view('frontend.course-detail');
     }
+
+    public function getBooking() {
+
+        return view('frontend.course-book');
+    }
 }

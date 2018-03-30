@@ -129,3 +129,65 @@
 .bold {
   font-weight: 900;
 }
+
+
+.share-wrapper {
+  padding: 0px;
+  margin: 0px;
+  list-style: none;
+  margin-bottom: 30px;
+  font-size: 20px;
+  @extend .display-flex;
+
+  .item {
+    margin-right: 20px;
+  }
+}
+
+
+.side-wrapper {
+  background: #f4eedf;
+  padding: 10px 20px;
+  font-weight: 700;
+
+  label {
+    margin-bottom: 0px;
+    font-size: 16px;
+    color: #9f7d5b;
+  }
+
+  .price {
+    color: $main-color-light;
+    font-size: 26px;
+    margin-bottom: 0px;
+  }
+}
+
+
+.label-form {
+  color: $secondary-color;
+  position: absolute;
+  top: 0px;
+  @include transition(all, 0.5s, ease);
+
+  &.active {
+    top: -25px;
+  }
+}
+
+input {
+  &.custom-control {
+    height: 40px;
+  }
+}
+
+.custom-control {
+  border-radius: 0px;
+  border-color: rgba($main-color, .3);
+
+  &:focus {
+    outline: none;
+    box-shadow: none;
+    border-color: rgba($main-color, .3);
+  }
+}

@@ -22,7 +22,7 @@
                     <a class="nav-link" href="#">Blog</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Baking Course</a>
+                    <a class="nav-link" href="{!! route('course') !!}">Baking Course</a>
                 </li>
             </ul>
             <form class="form-inline my-2 my-md-0">

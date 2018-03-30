@@ -47,6 +47,10 @@ Route::get('/product/{type?}/detail/{url?}', 'Frontend\ProductController@getDeta
 
 Route::get('/baking-course', 'Frontend\CourseController@index')->name('course');
 
+Route::get('/baking-course/detail/{url?}', 'Frontend\CourseController@getDetail')->name('course-detail');
+
+Route::get('/baking-course/book/{url?}', 'Frontend\CourseController@getBooking')->name('course-book');
+
 
 
 

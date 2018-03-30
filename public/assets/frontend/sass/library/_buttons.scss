@@ -39,6 +39,17 @@
   &.italic {
     font-style: italic;
   }
+
+  &.btn-full {
+    width: 100%;
+    font-weight: 700;
+  }
+
+  &.form-btn {
+    padding: 15px;
+    width: 250px;
+    font-weight: 700;
+  }
 }
 
 
@@ -98,6 +109,14 @@
   font-size: 18px;
   font-weight: 700;
   @include transition(all, 0.5s, ease);
+
+  &.small {
+    font-size: 14px;
+
+    .fa {
+      font-size: 20px;
+    }
+  }
 
   &:hover {
     color: $main-color;

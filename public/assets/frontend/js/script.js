@@ -65,6 +65,24 @@ $(document).ready(function () {
         }
     });
 
+
+
+
+
+    // Booking Form
+
+    $('.custom-control').focusin(function (e) {
+        e.preventDefault();
+        $(this).prev().addClass('active');
+    });
+
+    $('.custom-control').focusout(function (e) {
+        e.preventDefault();
+        if ($(this).val() == ''){
+            $(this).prev().removeClass('active');
+        }
+    });
+
 });
 
 

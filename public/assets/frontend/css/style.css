@@ -79,6 +79,13 @@ h1, h2, h3, h4, h5, h6 {
     transform: none; }
   .btn.italic {
     font-style: italic; }
+  .btn.btn-full {
+    width: 100%;
+    font-weight: 700; }
+  .btn.form-btn {
+    padding: 15px;
+    width: 250px;
+    font-weight: 700; }
 
 .secondary-btn {
   background: #d3ae48;
@@ -123,6 +130,10 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   -o-transition: all 0.5s ease; }
+  .text-btn.small {
+    font-size: 14px; }
+    .text-btn.small .fa {
+      font-size: 20px; }
   .text-btn:hover {
     color: #680e28; }
     .text-btn:hover .fa {
@@ -221,7 +232,7 @@ h1, h2, h3, h4, h5, h6 {
 .waves-effect .waves-ripple {
   z-index: -1; }
 
-.display-flex, .text-btn, .slider .item .box, .slider .item .text-btn, .socmed-section .socmed-wrapper, .socmed-section .circle, #footer .list-wrapper, #footer .list, .card-product .size-list, .card-blog, .card-blog .btn-wrapper, .card-cta .circle-wrapper, .default-banner, #home .course-wrapper .course-detail-slider .slick-slide .button-wrapper, #product .nav-product, #product .nav-product-tag, #product .share-wrapper, #product .size-wrapper, #about .nav, #about .nav .nav-link {
+.display-flex, .text-btn, .slider .item .box, .slider .item .text-btn, .socmed-section .socmed-wrapper, .socmed-section .circle, #footer .list-wrapper, #footer .list, .card-product .size-list, .card-blog, .card-blog .btn-wrapper, .card-cta .circle-wrapper, .default-banner, .share-wrapper, #home .course-wrapper .course-detail-slider .slick-slide .button-wrapper, #product .nav-product, #product .nav-product-tag, #product .size-wrapper, #about .nav, #about .nav .nav-link, #course .course-card, #course .course-card .img-wrapper {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -588,6 +599,72 @@ nav.navbar {
 .bold {
   font-weight: 900; }
 
+.share-wrapper {
+  padding: 0px;
+  margin: 0px;
+  list-style: none;
+  margin-bottom: 30px;
+  font-size: 20px; }
+  .share-wrapper .item {
+    margin-right: 20px; }
+
+.side-wrapper {
+  background: #f4eedf;
+  padding: 10px 20px;
+  font-weight: 700; }
+  .side-wrapper label {
+    margin-bottom: 0px;
+    font-size: 16px;
+    color: #9f7d5b; }
+  .side-wrapper .price {
+    color: #87163c;
+    font-size: 26px;
+    margin-bottom: 0px; }
+
+.label-form {
+  color: #d3ae48;
+  position: absolute;
+  top: 0px;
+  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease; }
+  .label-form.active {
+    top: -25px; }
+
+input.custom-control {
+  height: 40px; }
+
+.custom-control {
+  border-radius: 0px;
+  border-color: rgba(104, 14, 40, 0.3); }
+  .custom-control:focus {
+    outline: none;
+    box-shadow: none;
+    border-color: rgba(104, 14, 40, 0.3); }
+
+.modal .body-wrapper {
+  text-align: center;
+  padding: 50px 0px 15px; }
+  .modal .body-wrapper .icon {
+    width: 110px;
+    margin-bottom: 15px; }
+  .modal .body-wrapper .summary {
+    margin-bottom: 30px; }
+  .modal .body-wrapper .text-btn {
+    color: #a2a1a1;
+    justify-content: center;
+    margin-bottom: 30px; }
+  .modal .body-wrapper .share-wrapper {
+    margin-bottom: 0px;
+    justify-content: center; }
+    .modal .body-wrapper .share-wrapper .item {
+      padding: 0px 15px;
+      margin: 0px; }
+  .modal .body-wrapper .small-text {
+    font-size: 12px;
+    margin-bottom: 0px; }
+
 #home .banner {
   position: relative; }
   #home .banner .lSSlideOuter .lSPager.lSpg {
@@ -738,14 +815,6 @@ nav.navbar {
       -webkit-transition: all 0.5s ease;
       -moz-transition: all 0.5s ease;
       -o-transition: all 0.5s ease; }
-#product .share-wrapper {
-  padding: 0px;
-  margin: 0px;
-  list-style: none;
-  margin-bottom: 30px;
-  font-size: 20px; }
-  #product .share-wrapper .item {
-    margin-right: 20px; }
 #product .size-wrapper {
   padding: 0px;
   margin: 0px;
@@ -771,18 +840,6 @@ nav.navbar {
   font-size: 42px;
   color: #87163c;
   margin-bottom: 0px; }
-#product .price-wrapper {
-  background: #f4eedf;
-  padding: 10px 20px;
-  font-weight: 700; }
-  #product .price-wrapper label {
-    margin-bottom: 0px;
-    font-size: 16px;
-    color: #9f7d5b; }
-  #product .price-wrapper .price {
-    color: #87163c;
-    font-size: 26px;
-    margin-bottom: 0px; }
 
 #about .advantage-wrapper {
   text-align: center;
@@ -858,5 +915,55 @@ nav.navbar {
   @media (max-width: 480px) {
     #about .tab-content {
       width: 100%; } }
+
+#course .course-detail-wrapper {
+  font-size: 18px; }
+  #course .course-detail-wrapper p {
+    font-size: 18px; }
+#course .form-group {
+  margin-bottom: 35px;
+  position: relative; }
+#course .course-card {
+  border: 1px solid #dccda7;
+  margin-bottom: 30px; }
+  #course .course-card .img-wrapper {
+    width: 30%; }
+    @media (max-width: 480px) {
+      #course .course-card .img-wrapper {
+        width: 100%; } }
+    #course .course-card .img-wrapper .img {
+      height: 100%; }
+  #course .course-card .detail-wrapper {
+    width: 70%;
+    padding: 15px;
+    position: relative; }
+    @media (max-width: 480px) {
+      #course .course-card .detail-wrapper {
+        width: 100%; } }
+    #course .course-card .detail-wrapper .date {
+      color: #d3ae48;
+      font-size: 14px;
+      margin-right: 15px; }
+    #course .course-card .detail-wrapper .author {
+      font-size: 14px;
+      font-weight: 700; }
+    #course .course-card .detail-wrapper .name {
+      color: #680e28;
+      font-weight: 700;
+      font-size: 16px;
+      margin-bottom: 10px;
+      display: block; }
+    #course .course-card .detail-wrapper .text-btn {
+      position: absolute;
+      right: 50px;
+      bottom: 15px;
+      color: #adadad; }
+      @media (max-width: 480px) {
+        #course .course-card .detail-wrapper .text-btn {
+          position: unset;
+          text-align: right;
+          display: block; } }
+      #course .course-card .detail-wrapper .text-btn:hover .fa {
+        margin-left: 15px; }
 
 /*# sourceMappingURL=style.css.map */

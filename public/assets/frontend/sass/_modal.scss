@@ -1,0 +1,40 @@
+.modal {
+
+
+
+  .body-wrapper {
+    text-align: center;
+    padding: 50px 0px 15px;
+
+    .icon {
+      width: 110px;
+      margin-bottom: 15px;
+    }
+
+    .summary {
+      margin-bottom: 30px;
+    }
+
+    .text-btn {
+      color: #a2a1a1;
+      justify-content: center;
+      margin-bottom: 30px;
+    }
+
+    .share-wrapper {
+      margin-bottom: 0px;
+      justify-content: center;
+
+      .item {
+        padding: 0px 15px;
+        margin: 0px;
+      }
+    }
+
+    .small-text {
+      font-size: 12px;
+      margin-bottom: 0px;
+    }
+  }
+
+}
