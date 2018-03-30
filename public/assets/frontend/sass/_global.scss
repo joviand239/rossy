@@ -107,21 +107,40 @@ nav.navbar {
 
 // Socmed Sectionn
 .socmed-section {
-  padding: 70px 0px;
-  background: $third-color;
+  background: #f0f3f9;
   text-align: center;
-
-  .name {
-    color: $main-color;
-    font-weight: 900;
-    font-size: 26px;
-    margin-bottom: 50px;
-  }
+  font-size: 20px;
 
   .socmed-wrapper {
     @extend .display-flex;
     align-items: center;
     justify-content: space-evenly;
+
+
+    .item {
+      width: 50%;
+      padding: 15px;
+      font-weight: 700;
+      @include transition(all, 0.5s, ease);
+
+      &.fb {
+
+        &:hover {
+          background: #e2e9ff;
+          color: $fb;
+        }
+
+      }
+
+      &.ig {
+
+        &:hover {
+          background: #fceff5;
+          color: $instagram;
+        }
+
+      }
+    }
   }
 
   .circle {

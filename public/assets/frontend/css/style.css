@@ -279,17 +279,26 @@ nav.navbar {
     margin-left: 15px; }
 
 .socmed-section {
-  padding: 70px 0px;
-  background: #efddac;
-  text-align: center; }
-  .socmed-section .name {
-    color: #680e28;
-    font-weight: 900;
-    font-size: 26px;
-    margin-bottom: 50px; }
+  background: #f0f3f9;
+  text-align: center;
+  font-size: 20px; }
   .socmed-section .socmed-wrapper {
     align-items: center;
     justify-content: space-evenly; }
+    .socmed-section .socmed-wrapper .item {
+      width: 50%;
+      padding: 15px;
+      font-weight: 700;
+      transition: all 0.5s ease;
+      -webkit-transition: all 0.5s ease;
+      -moz-transition: all 0.5s ease;
+      -o-transition: all 0.5s ease; }
+      .socmed-section .socmed-wrapper .item.fb:hover {
+        background: #e2e9ff;
+        color: #3b59b6; }
+      .socmed-section .socmed-wrapper .item.ig:hover {
+        background: #fceff5;
+        color: #c11c78; }
   .socmed-section .circle {
     width: 200px;
     height: 200px;
@@ -566,7 +575,7 @@ nav.navbar {
   -moz-transition: all 0.5s ease;
   -o-transition: all 0.5s ease; }
   .ig-hover:hover {
-    color: #4e433c; }
+    color: #c11c78; }
 
 .twitter-hover {
   transition: all 0.5s ease;

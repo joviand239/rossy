@@ -2,17 +2,15 @@
 
     <div class="container">
 
-        <h1 class="name">@rossy_bakery_supplier</h1>
-
         <div class="socmed-wrapper">
 
 
-            <a href="#" class="circle">
-                <i class="fa fa-facebook"></i>
+            <a href="#" class="item fb">
+                <i class="fa fa-facebook"></i> Facebook
             </a>
 
-            <a href="#" class="circle">
-                <i class="fa fa-instagram"></i>
+            <a href="#" class="item ig">
+                <i class="fa fa-instagram"></i> Instagram
             </a>
 
 
