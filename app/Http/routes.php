@@ -51,6 +51,10 @@ Route::get('/baking-course/detail/{url?}', 'Frontend\CourseController@getDetail'
 
 Route::get('/baking-course/book/{url?}', 'Frontend\CourseController@getBooking')->name('course-book');
 
+Route::get('/blog', 'Frontend\BlogController@index')->name('blog');
+
+Route::get('/blog/detail/{url?}', 'Frontend\BlogController@getDetail')->name('blog-detail');
+
 
 
 

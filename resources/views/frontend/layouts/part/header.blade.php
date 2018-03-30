@@ -19,7 +19,7 @@
                     <a class="nav-link" href="{!! route('about') !!}">About Us</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Blog</a>
+                    <a class="nav-link" href="{!! route('blog') !!}">Blog</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{!! route('course') !!}">Baking Course</a>

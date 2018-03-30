@@ -1,0 +1,55 @@
+#blog {
+
+
+
+
+  .nav-category-tag {
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+    @extend .display-flex;
+    justify-content: center;
+    font-size: 14px;
+    margin-bottom: 50px;
+
+    .item {
+      padding: 0px 10px;
+
+      &.active, &:hover {
+
+        a {
+          color: $secondary-color;
+          border: 1px solid $secondary-color;
+        }
+      }
+
+      a {
+        font-weight: 700;
+        padding: 2px 12px;
+        border-radius: 20px;
+        border: 1px solid transparent;
+        @include transition(all, 0.5s, ease);
+      }
+    }
+  }
+
+
+  .card-blog {
+    margin-right: 0px;
+    width: auto;
+    margin-bottom: 30px;
+    @include transition(all, 0.5s, ease);
+
+    &:hover {
+      box-shadow: 0px 0px 20px 2px #acacac;
+    }
+  }
+
+  .blog-detail-wrapper {
+    p {
+      font-size: 16px;
+      margin-bottom: 25px;
+    }
+  }
+
+}
