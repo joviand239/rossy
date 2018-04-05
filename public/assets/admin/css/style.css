@@ -1,22 +1,22 @@
 .app-login {
-    background: #a6ce39;
+    background: #680e28;
 }
 .btn.btn-success {
-    border-color: #a6ce39;
-    border-bottom-color: #a6ce39;
-    background-color: #a6ce39;
+    border-color: #680e28;
+    border-bottom-color: #680e28;
+    background-color: #680e28;
 }
 aside.app-sidebar .sidebar-menu ul.sidebar-nav > li.active > a .icon {
-    background-color: #a6ce39;
+    background-color: #680e28;
     color: white;
 }
 .pagination > li.active > a, .pagination > li.active > span {
     border: 0;
-    border-bottom: 2px solid #a6ce39;
-    background-color: #a6ce39;
+    border-bottom: 2px solid #680e28;
+    background-color: #680e28;
 }
 aside.app-sidebar .sidebar-menu ul.sidebar-nav > li.active > a .title {
-    color: #a6ce39;
+    color: #680e28;
 }
 .note-editor.note-frame .note-editing-area .note-editable {
     min-height: 100px;

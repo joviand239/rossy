@@ -4,17 +4,19 @@ namespace App\Entity\CMS;
 
 use App\Entity\Base\Page;
 
-class Home extends Page {
-    const TITLE = 'Home';
+class PageBlog extends Page {
+    const TITLE = 'Blog';
 
-    const CMS_NAME = 'Home';
-    const CMS_INFO = 'Halaman utama';
-    const CMS_SITEMAP = 'Home';
+    const CMS_NAME = 'Blog';
+    const CMS_INFO = 'Page Blog';
+    const CMS_SITEMAP = 'Blog';
 
     const FORM_TYPE = [
         'metaTitle' => 'Text',
         'metaDescription' => 'TextArea',
-        'banner' => 'ListSortable',
+        'bannerBackground' => 'Image_1',
+        'bannerTitle' => 'Text',
+        'bannerSubtitle' => 'Text',
     ];
 
     const FORM_LABEL = [
@@ -28,12 +30,7 @@ class Home extends Page {
     ];
 
     const FORM_LIST = [
-        'banner' => [
-            'background' => 'Image_1',
-            'title' => 'Text',
-            'subtitle' => 'Text',
-            'link' => 'Text',
-        ]
+
     ];
 
     const FORM_SELECT_LIST = [

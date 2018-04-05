@@ -32,7 +32,16 @@ nav.navbar {
 
         .nav-link {
           font-weight: 900;
-          border-bottom: 3px solid $secondary-color;
+          position: relative;
+
+          &:before {
+            content: '';
+            width: 100%;
+            left: 0;
+            bottom: 0;
+            position: absolute;
+            border-bottom: 3px solid $secondary-color;
+          }
         }
       }
     }
@@ -41,11 +50,25 @@ nav.navbar {
       padding: 5px;
       color: $secondary-color;
       text-transform: uppercase;
+      position: relative;
       @include transition(all, 0.5s, ease);
 
+      &:before {
+        content: '';
+        width: 100%;
+        left: 0;
+        bottom: -15px;
+        position: absolute;
+        border-bottom: 3px solid transparent;
+        @include transition(all, 0.5s, ease);
+      }
+
       &:hover {
-        font-weight: 900;
-        border-bottom: 3px solid $secondary-color;
+
+        &:before {
+          bottom: 0;
+          border-color: $secondary-color;
+        }
       }
     }
   }

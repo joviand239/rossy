@@ -15,8 +15,11 @@ use App\Entity\CMS\Home;
 class HomeController extends FrontendController {
 
     public function index() {
+        $page = Home::getPage();
 
-        return view('frontend.home');
+        return view('frontend.home', [
+            'page' => $page->json,
+        ]);
     }
 
     public function getMaintenance() {

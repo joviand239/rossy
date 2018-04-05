@@ -1,20 +1,14 @@
 @extends('frontend.layouts.frontend')
 
-@section('meta_title', 'Baking Course')
+@section('meta_title', @$page->metaTitle)
 
-@section('meta_description', 'Baking Course Page')
+@section('meta_description', @$page->metaDescription)
 
 @section('content')
 
     <section id="course">
 
-        <div class="default-banner" style="background: url({!! url('/') !!}/assets/frontend/images/banner-page.jpg)">
-            <div class="container banner-wrapper">
-                <h1 class="title">Baking Course</h1>
-                <h2 class="subtitle">Know more about Rossy and the people behind it.</h2>
-            </div>
-        </div>
-
+        @include('frontend.layouts.section.default-banner')
 
         <div class="default-section">
 

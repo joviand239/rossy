@@ -5,11 +5,11 @@
         <div class="socmed-wrapper">
 
 
-            <a href="#" class="item fb">
+            <a href="{!! getAboutAttribute('facebook') !!}" class="item fb">
                 <i class="fa fa-facebook"></i> Facebook
             </a>
 
-            <a href="#" class="item ig">
+            <a href="{!! getAboutAttribute('instagram') !!}" class="item ig">
                 <i class="fa fa-instagram"></i> Instagram
             </a>
 
@@ -29,31 +29,19 @@
                 <div class="list-wrapper">
                     <ul class="list">
                         <li class="item">
-                            <a href="#">Home</a>
+                            <a href="{!! route('home') !!}">Home</a>
                         </li>
                         <li class="item">
-                            <a href="#">Product</a>
+                            <a href="{!! route('product') !!}">Product</a>
                         </li>
                         <li class="item">
-                            <a href="#">About Us</a>
+                            <a href="{!! route('about') !!}">About Us</a>
                         </li>
                         <li class="item">
-                            <a href="#">Blog</a>
+                            <a href="{!! route('blog') !!}">Blog</a>
                         </li>
                         <li class="item">
-                            <a href="#">Our Location</a>
-                        </li>
-                        <li class="item">
-                            <a href="#">Contact Us</a>
-                        </li>
-                    </ul>
-
-                    <ul class="list">
-                        <li class="item">
-                            <a href="#">Terms & Condition</a>
-                        </li>
-                        <li class="item">
-                            <a href="#">Privacy Policy</a>
+                            <a href="[{!! route('contact') !!}">Contact Us</a>
                         </li>
                     </ul>
                 </div>
@@ -61,8 +49,8 @@
 
             </div>
             <div class="col-md-6 order-md-1">
-                <p>Rossy Bakery  Supplier, Jl. Kaji No. 38, Jakarta Pusat</p>
-                <p>(021) 63211 45/47a</p>
+                <p>{!! getAboutAttribute('address') !!}</p>
+                <p>{!! getAboutAttribute('phone') !!}</p>
                 <p>© Copyright 2018 Rossy Bakery Supplier. All rights are reserved</p>
             </div>
         </div>

@@ -4,6 +4,7 @@
 use \App\Entity\Order;
 use \App\Entity\User\Customer;
 use \App\Util\Constant;
+use \App\Entity\CMS\About;
 
 function getPriceNumberWithComa($value) {
     if (empty($value)) {
@@ -223,6 +224,17 @@ function getOrderStatusName($name) {
     ];
 
     return $map[$name];
+}
+
+function getAboutAttribute($key){
+    $page = About::getPage();
+
+
+    if (isset($page->json->$key)){
+        return $page->json->$key;
+    }else {
+        return '';
+    }
 }
 
 

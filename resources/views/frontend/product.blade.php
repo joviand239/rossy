@@ -1,20 +1,14 @@
 @extends('frontend.layouts.frontend')
 
-@section('meta_title', 'Product')
+@section('meta_title', @$page->metaTitle)
 
-@section('meta_description', 'Product')
+@section('meta_description', @$page->metaDescription)
 
 @section('content')
 
     <section id="product">
 
-        <div class="default-banner" style="background: url({!! url('/') !!}/assets/frontend/images/banner-page.jpg)">
-            <div class="container banner-wrapper">
-                <h1 class="title">PRODUCT</h1>
-                <h2 class="subtitle">Our complete catalogue are here, all your needs to bake your cake is here, so enjoy it ;)</h2>
-            </div>
-        </div>
-
+        @include('frontend.layouts.section.default-banner')
 
         <div class="default-section">
             <div class="container">

@@ -250,18 +250,37 @@ nav.navbar {
     padding: 5px 10px; }
     nav.navbar .navbar-nav .nav-item.active .nav-link {
       font-weight: 900;
-      border-bottom: 3px solid #d3ae48; }
+      position: relative; }
+      nav.navbar .navbar-nav .nav-item.active .nav-link:before {
+        content: '';
+        width: 100%;
+        left: 0;
+        bottom: 0;
+        position: absolute;
+        border-bottom: 3px solid #d3ae48; }
   nav.navbar .navbar-nav .nav-link {
     padding: 5px;
     color: #d3ae48;
     text-transform: uppercase;
+    position: relative;
     transition: all 0.5s ease;
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease; }
-    nav.navbar .navbar-nav .nav-link:hover {
-      font-weight: 900;
-      border-bottom: 3px solid #d3ae48; }
+    nav.navbar .navbar-nav .nav-link:before {
+      content: '';
+      width: 100%;
+      left: 0;
+      bottom: -15px;
+      position: absolute;
+      border-bottom: 3px solid transparent;
+      transition: all 0.5s ease;
+      -webkit-transition: all 0.5s ease;
+      -moz-transition: all 0.5s ease;
+      -o-transition: all 0.5s ease; }
+    nav.navbar .navbar-nav .nav-link:hover:before {
+      bottom: 0;
+      border-color: #d3ae48; }
 
 .slider .item .box {
   background-position: center center !important;

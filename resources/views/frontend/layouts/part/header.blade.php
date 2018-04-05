@@ -9,19 +9,19 @@
 
         <div class="collapse navbar-collapse" id="navbarsExample07">
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
+                <li class="nav-item {!! isActiveRoute(['home']) !!}">
                     <a class="nav-link" href="{!! route('home') !!}">Home</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item {!! isActiveRoute(['product']) !!}">
                     <a class="nav-link" href="{!! route('product', ['type' => 'popular']) !!}">Product</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item {!! isActiveRoute(['about']) !!}">
                     <a class="nav-link" href="{!! route('about') !!}">About Us</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item {!! isActiveRoute(['blog']) !!}">
                     <a class="nav-link" href="{!! route('blog') !!}">Blog</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item {!! isActiveRoute(['course']) !!}">
                     <a class="nav-link" href="{!! route('course') !!}">Baking Course</a>
                 </li>
             </ul>

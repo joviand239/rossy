@@ -1,8 +1,8 @@
 @extends('frontend.layouts.frontend')
 
-@section('meta_title', 'Home')
+@section('meta_title', @$page->metaTitle)
 
-@section('meta_description', 'Our Homepage')
+@section('meta_description', @$page->metaDescription)
 
 @section('content')
 
@@ -10,42 +10,25 @@
         <div class="banner">
             <ul id="home-slider" class="slider">
 
-                <li class="item">
-                    <div class="box" style="background: url({!! url('/') !!}/assets/frontend/images/banner-image.jpg)">
-                        <div class="container">
-                            <div class="box-container">
-                                <span class="title">BAKED YOUR CAKE</span>
-                                <br>
-                                <br>
-                                <span class="title"> WITH BEST QUALITY INGREDIENTS</span>
+                @foreach(@$page->banner as $item)
+                    <li class="item">
+                        <div class="box" style="background: url({!! getImageUrlSize(@$item->background[0], 'full') !!})">
+                            <div class="container">
+                                <div class="box-container">
+                                    <span class="title">{!! @$item->title !!}</span>
+                                    <br>
+                                    <br>
+                                    <span class="title">{!! @$item->subtitle !!}</span>
 
-                                <br>
-                                <br>
+                                    <br>
+                                    <br>
 
-                                <a href="#" class="text-btn">EXPLORE MORE <i class="fa fa-long-arrow-right"></i> </a>
+                                    <a href="{!! @$item->link !!}" class="text-btn">EXPLORE MORE <i class="fa fa-long-arrow-right"></i> </a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </li>
-
-                <li class="item">
-                    <div class="box" style="background: url({!! url('/') !!}/assets/frontend/images/banner-image.jpg)">
-                        <div class="container">
-                            <div class="box-container">
-                                <span class="title">BAKED YOUR CAKE</span>
-                                <br>
-                                <br>
-                                <span class="title"> WITH BEST QUALITY INGREDIENTS</span>
-
-                                <br>
-                                <br>
-
-                                <a href="#" class="text-btn">EXPLORE MORE <i class="fa fa-long-arrow-right"></i> </a>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-
+                    </li>
+                @endforeach
             </ul>
         </div>
 

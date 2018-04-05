@@ -16,7 +16,7 @@ Route::group(['prefix'=>'admin'], function () {
 		Route::get('/user/{id?}', 'Admin\AdminController@details')->name('user');
 		Route::post('/user/{id?}', 'Admin\AdminController@save' );
 
-		Route::get('/cms/{type}/{subtype?}', 'CMSCore\Admin\CMSController@index');
+		Route::get('/cms/{type}/{subtype?}', 'CMSCore\Admin\CMSController@index')->name('admin.page');
 		Route::get('/cms/details/{type}/{subtype}/{id?}', 'CMSCore\Admin\CMSController@details');
 		Route::post('/cms/details/{type}/{subtype}/{id?}', 'CMSCore\Admin\CMSController@save');
 		Route::get('/cms/delete/{type}/{subtype}/{id?}', 'CMSCore\Admin\CMSController@delete');
@@ -25,6 +25,11 @@ Route::group(['prefix'=>'admin'], function () {
 		Route::get('/order/{id?}', 'Admin\OrderController@details')->name('order');
 		Route::post('/order/{id?}', 'Admin\OrderController@save');
 		Route::get('/order/delete/{id?}', 'Admin\OrderController@delete');
+
+
+		CMSCore::CRUDRoute('chef', 'chefs');
+
+        CMSCore::CRUDRoute('course', 'courses');
 
 	});
 });
