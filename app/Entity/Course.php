@@ -14,17 +14,22 @@ class Course extends BaseEntity {
         return $this->belongsToMany(Chef::class, 'courseChef');
     }
 
+    public function coursePlace(){
+        return $this->hasOne(CoursePlace::class, 'id', 'cousePlaceId');
+    }
+
     const FORM_REQUIRED = ['name'];
 
     const FORM_TYPE = [
         'name' => 'Text',
         'featuredImage' => 'Image_1',
         'chefs' => 'FastSelect',
+        'coursePlaceId' => 'Select',
         'date' => 'DateRange',
         'time' => 'TimeRange',
         'quota' => 'Number',
-        'price' => 'Amount',
-        'description' => 'Wysiwyg'
+        'price' => 'Text',
+        'description' => 'Wysiwyg',
     ];
 
     const INDEX_FIELD = [
@@ -35,7 +40,12 @@ class Course extends BaseEntity {
         'price'
     ];
     const FORM_SELECT_LIST = [
-        'chefs' => 'GetChefList'
+        'chefs' => 'GetChefList',
+        'coursePlaceId' => 'GetCoursePlaceList'
+    ];
+
+    const FORM_LABEL = [
+        'coursePlaceId' => 'Place',
     ];
 
 

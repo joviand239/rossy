@@ -16,22 +16,50 @@
                 </a>
             </li>
 
-            <li class="dropdown {!! isActiveRoute(['admin.chefs']) !!}">
-                <a href="{!! route('admin.chefs') !!}">
-                    <div class="icon">
-                        <i class="fa fa-address-book" aria-hidden="true"></i>
-                    </div>
-                    <div class="title">Chef</div>
-                </a>
-            </li>
-
-            <li class="dropdown {!! isActiveRoute(['admin.courses']) !!}">
-                <a href="{!! route('admin.courses') !!}">
+            <li class="dropdown {!! isActiveRoute(['admin.chefs', 'admin.courses', 'admin.courseplaces']) !!}">
+                <a href="#">
                     <div class="icon">
                         <i class="fa fa-object-ungroup" aria-hidden="true"></i>
                     </div>
                     <div class="title">Course</div>
                 </a>
+
+
+                <div class="dropdown-menu">
+                    <ul>
+                        <li class="dropdown">
+                            <a href="{!! route('admin.courses') !!}">Courses</a>
+                        </li>
+                        <li class="dropdown">
+                            <a href="{!! route('admin.chefs') !!}">Chef</a>
+                        </li>
+                        <li class="dropdown">
+                            <a href="{!! route('admin.courseplaces') !!}">Place</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+
+
+            <li class="dropdown {!! isActiveRoute(['admin.productcategories', 'admin.products']) !!}">
+                <a href="#">
+                    <div class="icon">
+                        <i class="fa fa-object-ungroup" aria-hidden="true"></i>
+                    </div>
+                    <div class="title">Product</div>
+                </a>
+
+
+                <div class="dropdown-menu">
+                    <ul>
+                        <li class="dropdown">
+                            <a href="{!! route('admin.productcategories') !!}">Category</a>
+                        </li>
+                        <li class="dropdown">
+                            <a href="{!! route('admin.products') !!}">Product</a>
+                        </li>
+                    </ul>
+                </div>
             </li>
 
 

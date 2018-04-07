@@ -27,9 +27,16 @@ Route::group(['prefix'=>'admin'], function () {
 		Route::get('/order/delete/{id?}', 'Admin\OrderController@delete');
 
 
+		// COURSE
 		CMSCore::CRUDRoute('chef', 'chefs');
-
         CMSCore::CRUDRoute('course', 'courses');
+        CMSCore::CRUDRoute('courseplace', 'courseplaces');
+
+
+        // PRODUCT
+        CMSCore::CRUDRoute('productcategory', 'productcategories');
+        CMSCore::CRUDRoute('product', 'products');
+
 
 	});
 });
