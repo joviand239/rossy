@@ -1,0 +1,215 @@
+.app {
+  .app-login {
+    background: $main-color;
+  }
+
+  .logo-login {
+    max-width: 350px;
+    width: 150px;
+  }
+
+  .form-header {
+    margin-bottom: 50px;
+  }
+
+  .logo {
+    width: 150px;
+  }
+}
+
+.btn.btn-space {
+  margin-right: 10px;
+}
+
+.app-login .app-body .app-block .app-form .form-header .highlight {
+  color: $main-color;
+  display: block;
+  padding-top: 25px;
+}
+
+aside.app-sidebar .sidebar-menu ul.sidebar-nav > li > a {
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+
+
+  .icon {
+    margin: 0px;
+    margin-right: 10px;
+    width: 40px;
+    height: 40px;
+
+    i {
+      &.fa {
+        font-size: 22px;
+      }
+    }
+
+  }
+
+  .title {
+    width: 60%;
+  }
+}
+
+.logo-admin {
+  padding: 5px !important;
+  max-height: 60px;
+}
+
+a {
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.main-color {
+  color: $main-color;
+  transition: all 0.5s ease;
+
+  &:hover {
+    color: $secondary-color;
+  }
+}
+
+.btn {
+  &.btn-success {
+    border-color: $main-color;
+    border-bottom-color: $main-color;
+    background-color: $main-color;
+  }
+}
+
+aside {
+  &.app-sidebar {
+    height: auto;
+
+
+    .sidebar-menu ul.sidebar-nav {
+      padding: 0px;
+
+      > li.active {
+
+        > a .title {
+          color: $main-color;
+        }
+
+        > a .icon {
+          background-color: $main-color;
+          color: white;
+        }
+
+      }
+
+      >li {
+        >a .title {
+          
+        }
+      }
+    }
+  }
+}
+
+.input-group {
+
+  .change, .cancel {
+    cursor: pointer;
+    transition: all 0.5s ease;
+    background-color: $main-color;
+    color: white;
+
+
+    &:hover {
+      transform: scaleX(1.1);
+    }
+  }
+}
+
+.pagination > li.active > a, .pagination > li.active > span {
+  border: 0;
+  border-bottom: 2px solid $main-color;
+  background-color: $main-color;
+}
+.note-editor.note-frame .note-editing-area .note-editable {
+  min-height: 100px;
+}
+
+.return-order-image {
+  img {
+    max-width: 100%;
+  }
+}
+
+
+/* Custom */
+.p-10{
+  padding:10px !important;
+}
+
+.p-15{
+  padding:15px !important;
+}
+
+.mr-15{
+  margin-right:15px;
+}
+
+.text-center{
+  text-align:center;
+}
+
+.text-right{
+  text-align:right;
+}
+
+.dataTables_scrollBody{
+  overflow-y:auto !important;
+}
+.instashopTag{
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  line-height: 20px;
+  background-color: black;
+  opacity: 0.7;
+  color: white;
+  text-align: center;
+  border-radius: 50%;
+}
+.input-group-addon.border-right{
+  border-right: 1px solid #c8d1d3
+}
+
+#app-layout {
+  .card {
+    position: relative;
+  }
+
+  .listSection {
+    .card {
+      margin-top: 30px;
+
+      .card-header {
+        border-top: 1px solid #dfe6e8;
+      }
+
+    }
+  }
+
+  .search-right {
+    .top {
+      right: 0px;
+      left: auto;
+      .dataTables_filter {
+        margin-right: 30px;
+      }
+    }
+  }
+}
+
+.file-input {
+  margin-bottom: 15px;
+}
+/* End Custom */

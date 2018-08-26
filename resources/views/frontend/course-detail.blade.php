@@ -1,8 +1,8 @@
 @extends('frontend.layouts.frontend')
 
-@section('meta_title', 'Baking Course Detail')
-
-@section('meta_description', 'Baking Course Detail')
+@section('metaTitle', @$page->metaTitle)
+@section('metaDescription', @$page->metaDescription)
+@section('metaKeywords', @$page->metaKeywords)
 
 @section('content')
 
@@ -12,7 +12,7 @@
 
             <div class="container">
 
-                <h1 class="default-title mb-0">Macam-macam Bika Ambon Medan Asli (hands on)</h1>
+                <h1 class="default-title mb-0">{!! @$page->name !!}</h1>
 
                 <ul class="share-wrapper">
                     <li class="item">
@@ -41,28 +41,12 @@
                     <div class="col-md-9">
 
                         <div class="course-detail-wrapper">
-                            <img class="mb-30" src="{!! url('/') !!}/assets/frontend/images/baking-detail-image-1.jpg" alt="Baking Course Detail Image">
+                            <img class="mb-30" src="{!! getImageUrlSize(@$page->featuredImage, 'md') !!}" alt=" {!! @$page->name !!}">
 
 
-                            <p>Kue sangat bersarang dan lembut, cara pembuatannya sangat mudah dan praktis.</p>
-
-
-                            <ul>
-                                <li>
-                                    Bika Ambon Original
-                                </li>
-                                <li>
-                                    Bika Ambon Keju
-                                </li>
-                                <li>
-                                    Bika Ambon Pandan Gula Malaka
-                                </li>
-                                <li>
-                                    Bika Ambon Almond
-                                </li>
-                            </ul>
-
-
+                            <div class="default-description-section">
+                                {!! @$page->description !!}
+                            </div>
 
                         </div>
 
@@ -73,22 +57,22 @@
                     <div class="col-md-3">
                         <div class="side-wrapper mb-20">
                             <label>DATE START</label>
-                            <p>Wednesday, 09 April 2018</p>
+                            <p>{!! getDateOnly(@$page->dateFrom) !!}</p>
 
                             <label>DATE FINISH</label>
-                            <p>Thursday, 10 April 2018</p>
+                            <p>{!! getDateOnly(@$page->dateTo) !!}</p>
 
                             <label>TIME</label>
-                            <p>10.00 am</p>
+                            <p>{!! getTimeOnly(@$page->timeFrom) !!}</p>
 
                             <label>TEACHER/ CHEF</label>
-                            <p>Herry Lim/ Awang</p>
+                            <p>@foreach(@$page->chefs as $key => $chef) {!! @$chef->name !!}{!! (count(@$page->chefs) && @$key+1 != count(@$item->chefs)) ? ', ' : '' !!} @endforeach</p>
 
                             <label>PRICE</label>
-                            <p class="price">Rp. 800.000,-</p>
+                            <p class="price">Rp. {!! getPriceNumber(@$page->price) !!}</p>
                         </div>
 
-                        <a href="{!! route('course-book') !!}" class="btn btn-full third-btn p-20" tabindex="0">BOOK NOW</a>
+                        <a href="{!! route('course-book', ['permalink' => @$page->permalink]) !!}" class="btn btn-full third-btn p-20" tabindex="0">BOOK NOW</a>
                     </div>
 
 
@@ -103,11 +87,11 @@
         <div class="book-cta-wrapper" style="background: url({!! url('/') !!}/assets/frontend/images/book-cta-background.jpg)">
             <div class="container">
                 <h1 class="title">
-                    Only available for 25 seats! Book yours now.
+                    Only available for {!! @$page->quota !!} seats! Book yours now.
                 </h1>
 
 
-                <a href="{!! route('course-book') !!}" class="btn third-btn">
+                <a href="{!! route('course-book', ['permalink' => @$page->permalink]) !!}" class="btn third-btn">
                     BOOK NOW
                 </a>
             </div>
@@ -117,5 +101,22 @@
     </section>
 
 
+@endsection
+
+
+@section('jsCustom')
+    <script>
+        var hasSuccess = {!! (Session::has('success')) ? 1 : 0 !!};
+
+        $(document).ready(function (e) {
+
+            if (hasSuccess == 1) {
+                $('#bookingFormModal').modal({
+                    keyboard: false
+                });
+            }
+
+        })
+    </script>
 @endsection
 

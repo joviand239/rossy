@@ -1,0 +1,80 @@
+.step-wrapper .sw-theme-circles > ul.step-anchor > li {
+  margin-left: 0px; }
+  .step-wrapper .sw-theme-circles > ul.step-anchor > li:last-of-type {
+    margin-left: auto; }
+  .step-wrapper .sw-theme-circles > ul.step-anchor > li > a {
+    border: 2px solid #f5f5f5;
+    margin: auto; }
+    .step-wrapper .sw-theme-circles > ul.step-anchor > li > a:hover {
+      border-radius: 50%; }
+    .step-wrapper .sw-theme-circles > ul.step-anchor > li > a:focus {
+      border-radius: 50%; }
+  .step-wrapper .sw-theme-circles > ul.step-anchor > li.active > a {
+    border-color: #d3ae48;
+    background: #d3ae48; }
+    .step-wrapper .sw-theme-circles > ul.step-anchor > li.active > a > small {
+      color: #d3ae48; }
+  .step-wrapper .sw-theme-circles > ul.step-anchor > li.done > a {
+    border-color: #680e28;
+    background: #680e28; }
+.step-wrapper .sw-theme-circles > ul.step-anchor {
+  display: flex;
+  width: 50%;
+  margin: auto;
+  justify-content: space-around;
+  margin-bottom: 100px; }
+.step-wrapper .sw-theme-circles .sw-container {
+  width: 80%;
+  margin: auto; }
+.step-wrapper .btn {
+  color: white;
+  font-weight: 700; }
+  .step-wrapper .btn.text-black {
+    color: black; }
+.step-wrapper .note-editor .btn {
+  color: black; }
+.step-wrapper .sw-btn-next, .step-wrapper .sw-btn-prev {
+  background: #d3ae48; }
+.step-wrapper .sw-btn-prev {
+  background: #7c7c7c; }
+.step-wrapper .btn-submit {
+  background: #680e28; }
+.step-wrapper .inline-wrapper {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px; }
+  .step-wrapper .inline-wrapper .control-label {
+    padding-top: 0px; }
+  .step-wrapper .inline-wrapper .custom-radio {
+    margin: 0px 30px; }
+  .step-wrapper .inline-wrapper .custom-control-label {
+    margin-bottom: 0px; }
+.step-wrapper input[type="date"].form-control {
+  line-height: unset; }
+.step-wrapper .mb-30 {
+  margin-bottom: 30px; }
+.step-wrapper select.form-control {
+  width: 100%; }
+.step-wrapper .input-group .input-group-addon {
+  background: #7c7c7c;
+  color: white;
+  padding: 5px 20px;
+  font-weight: 700; }
+.step-wrapper .panel .panel-collapse {
+  padding: 30px; }
+.step-wrapper .table input.form-control {
+  margin-bottom: 0px; }
+.step-wrapper .table tbody tr td, .step-wrapper .table tbody tr th, .step-wrapper .table thead tr td, .step-wrapper .table thead tr th {
+  padding: 10px; }
+
+.status-wrapper {
+  text-align: center;
+  padding-top: 50px; }
+  .status-wrapper .btn-approve {
+    background: #680e28;
+    color: white; }
+  .status-wrapper .btn-reject {
+    background: #E8130D;
+    color: white; }
+
+/*# sourceMappingURL=product.css.map */

@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'env' => env('APP_ENV', 'production'),
+    'env' => env('APP_ENV', 'local'),
 
     /*
     |--------------------------------------------------------------------------
@@ -52,7 +52,7 @@ return [
     |
     */
 
-    'timezone' => 'UTC',
+    'timezone' => env('APP_TIMEZONE', 'UTC'),
 
     /*
     |--------------------------------------------------------------------------
@@ -163,7 +163,9 @@ return [
         Tymon\JWTAuth\Providers\JWTAuthServiceProvider::class,
         niklasravnsborg\LaravelPdf\PdfServiceProvider::class,
         WVI\CMSCore\CMSCoreProvider::class,
-        Laravel\Socialite\SocialiteServiceProvider::class
+        Laravel\Socialite\SocialiteServiceProvider::class,
+        Yajra\Datatables\DatatablesServiceProvider::class,
+        PulkitJalan\Google\GoogleServiceProvider::class,
     ],
 
     /*
@@ -217,10 +219,10 @@ return [
         'Carbon'     => \Carbon\Carbon::class,
         'JWTAuth' => Tymon\JWTAuth\Facades\JWTAuth::class,
         'PDF' => niklasravnsborg\LaravelPdf\Facades\Pdf::class,
-	    'Socialite' => Laravel\Socialite\Facades\Socialite::class,
-        'CMSCore' => WVI\CMSCore\Facades\CMSCore::class
+        'Socialite' => Laravel\Socialite\Facades\Socialite::class,
+        'CMSCore' => WVI\CMSCore\Facades\CMSCore::class,
+        'DataTables' => Yajra\Datatables\Facades\Datatables::class,
+        'Constant' => \App\Util\Constant::class,
+        'Google' => PulkitJalan\Google\Facades\Google::class,
     ],
-
-
-
 ];

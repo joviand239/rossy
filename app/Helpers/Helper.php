@@ -237,5 +237,3 @@ function getAboutAttribute($key){
     }
 }
 
-
-

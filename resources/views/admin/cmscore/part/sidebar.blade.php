@@ -40,11 +40,20 @@
                 </div>
             </li>
 
+            <li class="dropdown {!! isActiveRoute(['admin.bookings']) !!}">
+                <a href="{!! route('admin.bookings') !!}">
+                    <div class="icon">
+                        <i class="fa fa-inbox" aria-hidden="true"></i>
+                    </div>
+                    <div class="title">Booking</div>
+                </a>
+            </li>
+
 
             <li class="dropdown {!! isActiveRoute(['admin.productcategories', 'admin.products']) !!}">
                 <a href="#">
                     <div class="icon">
-                        <i class="fa fa-object-ungroup" aria-hidden="true"></i>
+                        <i class="fa fa-database" aria-hidden="true"></i>
                     </div>
                     <div class="title">Product</div>
                 </a>

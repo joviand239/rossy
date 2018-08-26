@@ -1,8 +1,8 @@
 @extends('frontend.layouts.frontend')
 
-@section('meta_title', 'Contact Us')
-
-@section('meta_description', 'Contact Us Page')
+@section('metaTitle', @$page->metaTitle)
+@section('metaDescription', @$page->metaDescription)
+@section('metaKeywords', @$page->metaKeywords)
 
 @section('content')
 

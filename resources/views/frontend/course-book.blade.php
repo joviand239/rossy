@@ -1,8 +1,8 @@
 @extends('frontend.layouts.frontend')
 
-@section('meta_title', 'Baking Course Booking Form')
-
-@section('meta_description', 'Baking Course Booking Form')
+@section('metaTitle', @$page->metaTitle)
+@section('metaDescription', @$page->metaDescription)
+@section('metaKeywords', @$page->metaKeywords)
 
 @section('content')
 
@@ -14,24 +14,24 @@
 
                 <div class="text-center">
                     <h3 class="default-subtitle">Booking Form</h3>
-                    <h1 class="default-title mb-70">Macam-macam Bika Ambon Medan Asli (hands on)</h1>
+                    <h1 class="default-title mb-70">{!! @$page->name !!}</h1>
                 </div>
 
                 <div class="row">
                     <div class="col-md-9">
 
-                        <form>
+                        <form action="{!! route('submit-booking', ['permalink' => @$page->permalink]) !!}" method="POST" data-toggle="validator" role="form">
                             <div class="form-group">
                                 <label class="label-form" for="name">Name</label>
-                                <input type="text" class="form-control custom-control" id="name" name="name" placeholder="Your Name">
+                                <input type="text" class="form-control custom-control" id="name" name="name" placeholder="Your Name" required>
                             </div>
                             <div class="form-group">
                                 <label class="label-form" for="email">Email</label>
-                                <input type="email" class="form-control custom-control" id="email" name="email" placeholder="Your Email">
+                                <input type="email" class="form-control custom-control" id="email" name="email" placeholder="Your Email" required>
                             </div>
                             <div class="form-group">
-                                <label class="label-form" for="phone">Phone Number</label>
-                                <input type="text" class="form-control custom-control" id="phone" name="phone" placeholder="Your Phone Number">
+                                <label class="label-form" for="phoneNumber">Phone Number</label>
+                                <input type="text" class="form-control custom-control" id="phoneNumber" name="phoneNumber" placeholder="Your Phone Number" required>
                             </div>
                             <div class="form-group">
                                 <label class="label-form" for="notes">Notes</label>
@@ -39,7 +39,7 @@
                             </div>
 
                             <div class="form-group text-right">
-                                <a href="#" data-toggle="modal" data-target="#bookingFormModal" class="btn third-btn form-btn">SUMBIT</a>
+                                <button type="submit" class="btn third-btn form-btn">SUMBIT</button>
                             </div>
                         </form>
 
@@ -50,19 +50,19 @@
                     <div class="col-md-3">
                         <div class="side-wrapper mb-20">
                             <label>DATE START</label>
-                            <p>Wednesday, 09 April 2018</p>
+                            <p>{!! getDateOnly(@$page->dateFrom) !!}</p>
 
                             <label>DATE FINISH</label>
-                            <p>Thursday, 10 April 2018</p>
+                            <p>{!! getDateOnly(@$page->dateTo) !!}</p>
 
                             <label>TIME</label>
-                            <p>10.00 am</p>
+                            <p>{!! getTimeOnly(@$page->timeFrom) !!}</p>
 
                             <label>TEACHER/ CHEF</label>
-                            <p>Herry Lim/ Awang</p>
+                            <p>@foreach(@$page->chefs as $key => $chef) {!! @$chef->name !!}{!! (count(@$page->chefs) && @$key+1 != count(@$item->chefs)) ? ', ' : '' !!} @endforeach</p>
 
                             <label>PRICE</label>
-                            <p class="price">Rp. 800.000,-</p>
+                            <p class="price">Rp. {!! getPriceNumber(@$page->price) !!}</p>
                         </div>
                     </div>
 

@@ -1,8 +1,8 @@
 @extends('frontend.layouts.frontend')
 
-@section('meta_title', @$page->metaTitle)
-
-@section('meta_description', @$page->metaDescription)
+@section('metaTitle', @$page->metaTitle)
+@section('metaDescription', @$page->metaDescription)
+@section('metaKeywords', @$page->metaKeywords)
 
 @section('content')
 
@@ -16,34 +16,33 @@
 
                 <h2 class="default-title text-center mb-50">Upcoming this Month</h2>
 
-                @for($i = 0 ; $i < 6 ; $i++)
+                @foreach(@$list as $key => $item)
 
                     <div class="course-card">
 
                         <div class="img-wrapper">
-                            <img class="img" src="{!! url('/') !!}/assets/frontend/images/baking-image-1.jpg" alt="Featured Baking Image">
+                            <img class="img" src="{!! getImageUrlSize(@$item->featuredImage, 'md') !!}" alt="Featured Baking Image">
                         </div>
 
 
                         <div class="detail-wrapper">
-                            <span class="date">Rabu, 09 April 2018</span> <span class="author">Oleh: Herry Lim/ Awang</span>
+                            <span class="date">{!! getDateOnly(@$item->dateFrom) !!}</span> <span class="author">Oleh: @foreach(@$item->chefs as $key => $chef) {!! @$chef->name !!}{!! (count(@$item->chefs) && @$key+1 != count(@$item->chefs)) ? ', ' : '' !!} @endforeach</span>
 
-                            <a href="{!! route('course-detail') !!}" class="name">MACAM-MACAM BIKA AMBON MEDAN ASLI (hands on)</a>
+                            <a href="{!! route('course-detail', ['permalink' => @$item->permalink]) !!}" class="name">{!! @$item->name !!}</a>
 
-                            <p>Kue sangat bersarang dan lembut, cara pembuatannya sangat mudah dan praktis. </p>
-                            <p>- Bika Ambon Original</p>
-                            <p>- Bika Ambon Keju</p>
-                            <p>- Bika Ambon Pandan Gula Malaka...</p>
+                            <div class="default-description-section">
+                                {!! @$item->description !!}
+                            </div>
 
 
-                            <a href="{!! route('course-detail') !!}" class="text-btn small">SEE MORE DETAIL<i class="fa fa-long-arrow-right"></i></a>
+                            <a href="{!! route('course-detail', ['permalink' => @$item->permalink]) !!}" class="text-btn small">SEE MORE DETAIL<i class="fa fa-long-arrow-right"></i></a>
 
                         </div>
 
 
                     </div>
 
-                @endfor
+                @endforeach
 
 
             </div>

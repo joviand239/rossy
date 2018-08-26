@@ -2,13 +2,32 @@
 
 namespace App\Entity;
 
+use App\CMSTrait\SingleImageTrait;
 use App\Entity\Base\BaseEntity;
 use App\Entity\User\CustomerDetails;
 use App\Util\Constant;
 
 
 class Course extends BaseEntity {
+    use SingleImageTrait;
+
     protected $table = 'course';
+
+    protected $appends = [
+        'permalink',
+    ];
+
+    protected $fillable = [
+        'name',
+        'featuredImage',
+        'chefs',
+        'coursePlaceId',
+        'date',
+        'time',
+        'quota',
+        'price',
+        'description',
+    ];
 
     public function chefs(){
         return $this->belongsToMany(Chef::class, 'courseChef');
@@ -20,6 +39,8 @@ class Course extends BaseEntity {
 
     const FORM_REQUIRED = ['name'];
 
+    const USE_META_SET = true;
+
     const FORM_TYPE = [
         'name' => 'Text',
         'featuredImage' => 'Image_1',
@@ -28,7 +49,7 @@ class Course extends BaseEntity {
         'date' => 'DateRange',
         'time' => 'TimeRange',
         'quota' => 'Number',
-        'price' => 'Text',
+        'price' => 'Amount',
         'description' => 'Wysiwyg',
     ];
 
@@ -48,7 +69,9 @@ class Course extends BaseEntity {
         'coursePlaceId' => 'Place',
     ];
 
-
+    public function getPermalinkAttribute() {
+        return getPermalink($this->name, $this->id);
+    }
 
     public function getValue($key, $listItem, $language){
         if ($key == 'date') {
@@ -70,10 +93,6 @@ class Course extends BaseEntity {
                 }
             }
             return $listName;
-        }
-        if ($key == 'price') {
-            if (empty($this->price)) return '';
-            return getPriceNumber($this->price);
         }
 
 

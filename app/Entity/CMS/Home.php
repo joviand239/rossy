@@ -11,20 +11,17 @@ class Home extends Page {
     const CMS_INFO = 'Halaman utama';
     const CMS_SITEMAP = 'Home';
 
+    const USE_META_SET = true;
+
     const FORM_TYPE = [
-        'metaTitle' => 'Text',
-        'metaDescription' => 'TextArea',
         'banner' => 'ListSortable',
     ];
 
     const FORM_LABEL = [
-        'metaTitle' => 'Judul halaman',
-        'metaDescription' => 'Deskripsi halaman',
     ];
 
     const FORM_LABEL_HELP = [
-        'metaTitle' => 'Untuk keperluan SEO',
-        'metaDescription' => 'Untuk keperluan SEO',
+
     ];
 
     const FORM_LIST = [

@@ -1,32 +1,132 @@
-.app-login {
-    background: #680e28;
-}
-.btn.btn-success {
-    border-color: #680e28;
-    border-bottom-color: #680e28;
-    background-color: #680e28;
-}
-aside.app-sidebar .sidebar-menu ul.sidebar-nav > li.active > a .icon {
-    background-color: #680e28;
-    color: white;
-}
-.pagination > li.active > a, .pagination > li.active > span {
-    border: 0;
-    border-bottom: 2px solid #680e28;
-    background-color: #680e28;
-}
-aside.app-sidebar .sidebar-menu ul.sidebar-nav > li.active > a .title {
-    color: #680e28;
-}
-.note-editor.note-frame .note-editing-area .note-editable {
-    min-height: 100px;
-}
+.app .app-login {
+  background: #000000; }
+.app .logo-login {
+  max-width: 350px;
+  width: 150px; }
+.app .form-header {
+  margin-bottom: 50px; }
+.app .logo {
+  width: 150px; }
 
-aside.app-sidebar .sidebar-menu ul.sidebar-nav {
-    padding: 0px;
-}
+.btn.btn-space {
+  margin-right: 10px; }
+
+.app-login .app-body .app-block .app-form .form-header .highlight {
+  color: #000000;
+  display: block;
+  padding-top: 25px; }
+
+aside.app-sidebar .sidebar-menu ul.sidebar-nav > li > a {
+  padding: 10px 15px;
+  display: flex;
+  align-items: center; }
+  aside.app-sidebar .sidebar-menu ul.sidebar-nav > li > a .icon {
+    margin: 0px;
+    margin-right: 10px;
+    width: 40px;
+    height: 40px; }
+    aside.app-sidebar .sidebar-menu ul.sidebar-nav > li > a .icon i.fa {
+      font-size: 22px; }
+  aside.app-sidebar .sidebar-menu ul.sidebar-nav > li > a .title {
+    width: 60%; }
+
+.logo-admin {
+  padding: 5px !important;
+  max-height: 60px; }
+
+a {
+  text-decoration: none; }
+  a:hover {
+    text-decoration: none; }
+
+.main-color {
+  color: #000000;
+  transition: all 0.5s ease; }
+  .main-color:hover {
+    color: #000000; }
+
+.btn.btn-success {
+  border-color: #000000;
+  border-bottom-color: #000000;
+  background-color: #000000; }
 
 aside.app-sidebar {
-    height: auto;
-}
+  height: auto; }
+  aside.app-sidebar .sidebar-menu ul.sidebar-nav {
+    padding: 0px; }
+    aside.app-sidebar .sidebar-menu ul.sidebar-nav > li.active > a .title {
+      color: #000000; }
+    aside.app-sidebar .sidebar-menu ul.sidebar-nav > li.active > a .icon {
+      background-color: #000000;
+      color: white; }
 
+.input-group .change, .input-group .cancel {
+  cursor: pointer;
+  transition: all 0.5s ease;
+  background-color: #000000;
+  color: white; }
+  .input-group .change:hover, .input-group .cancel:hover {
+    transform: scaleX(1.1); }
+
+.pagination > li.active > a, .pagination > li.active > span {
+  border: 0;
+  border-bottom: 2px solid #000000;
+  background-color: #000000; }
+
+.note-editor.note-frame .note-editing-area .note-editable {
+  min-height: 100px; }
+
+.return-order-image img {
+  max-width: 100%; }
+
+/* Custom */
+.p-10 {
+  padding: 10px !important; }
+
+.p-15 {
+  padding: 15px !important; }
+
+.mr-15 {
+  margin-right: 15px; }
+
+.text-center {
+  text-align: center; }
+
+.text-right {
+  text-align: right; }
+
+.dataTables_scrollBody {
+  overflow-y: auto !important; }
+
+.instashopTag {
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  line-height: 20px;
+  background-color: black;
+  opacity: 0.7;
+  color: white;
+  text-align: center;
+  border-radius: 50%; }
+
+.input-group-addon.border-right {
+  border-right: 1px solid #c8d1d3; }
+
+#app-layout .card {
+  position: relative; }
+#app-layout .listSection .card {
+  margin-top: 30px; }
+  #app-layout .listSection .card .card-header {
+    border-top: 1px solid #dfe6e8; }
+#app-layout .search-right .top {
+  right: 0px;
+  left: auto; }
+  #app-layout .search-right .top .dataTables_filter {
+    margin-right: 30px; }
+
+.file-input {
+  margin-bottom: 15px; }
+
+/* End Custom */
+
+/*# sourceMappingURL=style.css.map */

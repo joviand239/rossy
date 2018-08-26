@@ -3,7 +3,7 @@
 use App\Entity\Chef;
 use App\Entity\CoursePlace;
 use App\Entity\ProductCategory;
-
+use App\Entity\Course;
 
 function GetChefList() {
     $map = [];
@@ -24,6 +24,14 @@ function GetCoursePlaceList() {
 function GetProductCategoryList() {
     $map = [];
     foreach(ProductCategory::all() as $item){
+        $map[$item->id] = $item->name;
+    }
+    return $map;
+}
+
+function GetCourseList() {
+    $map = [];
+    foreach(Course::all() as $item){
         $map[$item->id] = $item->name;
     }
     return $map;

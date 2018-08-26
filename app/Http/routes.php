@@ -32,6 +32,9 @@ Route::group(['prefix'=>'admin'], function () {
         CMSCore::CRUDRoute('course', 'courses');
         CMSCore::CRUDRoute('courseplace', 'courseplaces');
 
+        // BOOKING
+        CMSCore::CRUDRoute('booking', 'bookings');
+
 
         // PRODUCT
         CMSCore::CRUDRoute('productcategory', 'productcategories');
@@ -57,11 +60,12 @@ Route::get('/product/{type?}', 'Frontend\ProductController@index')->name('produc
 
 Route::get('/product/{type?}/detail/{url?}', 'Frontend\ProductController@getDetail')->name('product-detail');
 
-Route::get('/baking-course', 'Frontend\CourseController@index')->name('course');
-
-Route::get('/baking-course/detail/{url?}', 'Frontend\CourseController@getDetail')->name('course-detail');
-
-Route::get('/baking-course/book/{url?}', 'Frontend\CourseController@getBooking')->name('course-book');
+Route::group(['prefix'=>'baking-course'], function () {
+    Route::get('/', 'Frontend\CourseController@index')->name('course');
+    Route::get('/detail/{permalink}', 'Frontend\CourseController@getDetail')->name('course-detail');
+    Route::get('/book/{permalink}', 'Frontend\CourseController@getBooking')->name('course-book');
+    Route::post('/book/submit/{permalink}', 'Frontend\CourseController@submitBooking')->name('submit-booking');
+});
 
 Route::get('/blog', 'Frontend\BlogController@index')->name('blog');
 

@@ -1,0 +1,168 @@
+@import "variables";
+
+
+
+
+.step-wrapper {
+
+
+  .sw-theme-circles>ul.step-anchor>li {
+    margin-left: 0px;
+
+
+    &:last-of-type {
+      margin-left: auto;
+    }
+
+    &>a {
+      border: 2px solid #f5f5f5;
+      margin: auto;
+
+      &:hover {
+        border-radius: 50%;
+      }
+
+      &:focus {
+        border-radius: 50%;
+      }
+    }
+
+    &.active>a {
+      border-color: $secondary-color;
+      background: $secondary-color;
+
+      &>small {
+        color: $secondary-color;
+      }
+    }
+
+    &.done>a {
+      border-color: $main-color;
+      background: $main-color;
+    }
+  }
+
+  .sw-theme-circles>ul.step-anchor {
+    display: flex;
+    width: 50%;
+    margin: auto;
+    justify-content: space-around;
+    margin-bottom: 100px;
+  }
+
+
+  .sw-theme-circles .sw-container {
+    width: 80%;
+    margin: auto;
+  }
+
+  .btn {
+    color: white;
+    font-weight: 700;
+
+    &.text-black {
+      color: black;
+    }
+  }
+
+  .note-editor {
+
+    .btn {
+      color: black;
+    }
+
+  }
+
+  .sw-btn-next, .sw-btn-prev {
+    background: $secondary-color;
+  }
+
+  .sw-btn-prev {
+    background: #7c7c7c;
+  }
+
+  .btn-submit {
+    background: $main-color;
+  }
+
+
+  .inline-wrapper {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+
+
+    .control-label {
+      padding-top: 0px;
+    }
+
+    .custom-radio {
+      margin: 0px 30px;
+    }
+
+    .custom-control-label {
+      margin-bottom: 0px;
+    }
+  }
+
+  input[type="date"].form-control {
+    line-height: unset;
+  }
+
+  .mb-30 {
+    margin-bottom: 30px;
+  }
+
+
+  select.form-control {
+    width: 100%;
+  }
+
+
+  .input-group .input-group-addon {
+    background: #7c7c7c;
+    color: white;
+    padding: 5px 20px;
+    font-weight: 700;
+  }
+
+  .panel {
+
+    .panel-collapse {
+      padding: 30px;
+    }
+  }
+
+  .table {
+
+    input.form-control {
+      margin-bottom: 0px;
+    }
+
+    tbody, thead {
+      tr {
+        td, th {
+          padding: 10px;
+        }
+      }
+    }
+  }
+}
+
+
+.status-wrapper {
+  text-align: center;
+  padding-top: 50px;
+
+  .btn-approve {
+    background: $main-color;
+    color: white;
+  }
+
+  .btn-reject {
+    background: $red;
+    color: white;
+  }
+
+
+}

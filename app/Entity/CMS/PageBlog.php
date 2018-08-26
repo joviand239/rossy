@@ -11,22 +11,20 @@ class PageBlog extends Page {
     const CMS_INFO = 'Page Blog';
     const CMS_SITEMAP = 'Blog';
 
+    const USE_META_SET = true;
+
     const FORM_TYPE = [
-        'metaTitle' => 'Text',
-        'metaDescription' => 'TextArea',
         'bannerBackground' => 'Image_1',
         'bannerTitle' => 'Text',
         'bannerSubtitle' => 'Text',
     ];
 
     const FORM_LABEL = [
-        'metaTitle' => 'Judul halaman',
-        'metaDescription' => 'Deskripsi halaman',
+
     ];
 
     const FORM_LABEL_HELP = [
-        'metaTitle' => 'Untuk keperluan SEO',
-        'metaDescription' => 'Untuk keperluan SEO',
+
     ];
 
     const FORM_LIST = [

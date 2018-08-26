@@ -8,8 +8,9 @@
     <meta name="viewport" content="initial-scale = 1.0,maximum-scale = 1.0" />
 
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>@yield('meta_title') | {!! env('PROJECT_NAME') !!}</title>
-    <meta name="description" content="@yield('meta_description')">
+    <title>@yield('metaTitle') | {!! env('PROJECT_NAME') !!}</title>
+    <meta name="description" content="@yield('metaDescription')">
+    <meta name="keywords" content="@yield('metaKeywords')">
 
     <!-- Bootstrap -->
     @include('frontend.layouts.part.css')
