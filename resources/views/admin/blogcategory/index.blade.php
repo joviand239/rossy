@@ -1,6 +1,6 @@
 @extends('cms.layouts.authorized')
 
-@section('title', 'Product Category List')
+@section('title', 'Category List')
 
 @section('headerCustom')
 	@php

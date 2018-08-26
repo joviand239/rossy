@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers\Frontend;
 
+use App\Entity\Blog;
+use App\Entity\BlogCategory;
 use App\Entity\Category;
 
 use App\Entity\CMS\PageBlog;
@@ -15,16 +17,44 @@ use App\Entity\CMS\Home;
 
 class BlogController extends FrontendController {
 
-    public function index() {
+    public function index($permalink = '') {
+        $categoryId = 0;
+
+        if ($permalink) {
+            $categoryId = parsePermalinkToId($permalink);
+        }
+
         $page = PageBlog::getPage();
+
+        $query = Blog::query();
+
+
+        if ($categoryId) {
+            $query->where('blogCategoryId', $categoryId);
+        }
+
+        $list = $query->get();
+
+        $category = BlogCategory::all();
 
         return view('frontend.blog', [
             'page' => $page->json,
+            'list' => $list,
+            'category' => $category,
+            'categoryId' => $categoryId,
         ]);
     }
 
-    public function getDetail() {
+    public function getDetail($permalink) {
+        $id = parsePermalinkToId($permalink);
 
-        return view('frontend.blog-detail');
+        $page = Blog::get($id);
+
+        $nextBlog = Blog::where('blogCategoryId', @$page->blogCategoryId)->take(2)->get();
+
+        return view('frontend.blog-detail', [
+            'page' => @$page,
+            'nextBlog' => @$nextBlog
+        ]);
     }
 }

@@ -72,6 +72,28 @@
             </li>
 
 
+            <li class="dropdown {!! isActiveRoute(['admin.blogcategories', 'admin.blogs']) !!}">
+                <a href="#">
+                    <div class="icon">
+                        <i class="fa fa-newspaper-o" aria-hidden="true"></i>
+                    </div>
+                    <div class="title">Blog</div>
+                </a>
+
+
+                <div class="dropdown-menu">
+                    <ul>
+                        <li class="dropdown">
+                            <a href="{!! route('admin.blogcategories') !!}">Category</a>
+                        </li>
+                        <li class="dropdown">
+                            <a href="{!! route('admin.blogs') !!}">List</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+
+
             {{--<li class="dropdown" >
                 <a>
                     <div class="icon">

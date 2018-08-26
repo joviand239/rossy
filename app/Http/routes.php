@@ -26,6 +26,10 @@ Route::group(['prefix'=>'admin'], function () {
 		Route::post('/order/{id?}', 'Admin\OrderController@save');
 		Route::get('/order/delete/{id?}', 'Admin\OrderController@delete');
 
+        // BLOG
+        CMSCore::CRUDRoute('blogcategory', 'blogcategories');
+        CMSCore::CRUDRoute('blog', 'blogs');
+
 
 		// COURSE
 		CMSCore::CRUDRoute('chef', 'chefs');
@@ -67,9 +71,10 @@ Route::group(['prefix'=>'baking-course'], function () {
     Route::post('/book/submit/{permalink}', 'Frontend\CourseController@submitBooking')->name('submit-booking');
 });
 
-Route::get('/blog', 'Frontend\BlogController@index')->name('blog');
-
-Route::get('/blog/detail/{url?}', 'Frontend\BlogController@getDetail')->name('blog-detail');
+Route::group(['prefix'=>'blog'], function () {
+    Route::get('/{permalink?}', 'Frontend\BlogController@index')->name('blog');
+    Route::get('/detail/{permalink}', 'Frontend\BlogController@getDetail')->name('blog-detail');
+});
 
 Route::get('/contact-us', 'Frontend\ContactController@index')->name('contact');
 

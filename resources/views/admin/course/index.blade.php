@@ -1,6 +1,6 @@
 @extends('cms.layouts.authorized')
 
-@section('title', 'Course\'s')
+@section('title', 'Course List')
 
 @section('headerCustom')
 	@php
@@ -39,6 +39,7 @@
                                     <a href="{{ route('admin.'.strtolower($model::getClassName()), ['id'=>$item->id]) }}">
                                         <button type="button" class="btn btn-default btn-xs"> Edit Details</button>
                                     </a>
+                                    <button type="button" class="btn btn-default btn-xs delete-button-modal" data-toggle="modal" data-target="#modal-delete-alert" data-url="{{ route('admin.'.strtolower($model::getClassName().'.delete'), ['id'=>$item->id]) }}"> Delete</button>
                                 </td>
                             </tr>
                         @endforeach
