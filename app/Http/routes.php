@@ -30,7 +30,6 @@ Route::group(['prefix'=>'admin'], function () {
         CMSCore::CRUDRoute('blogcategory', 'blogcategories');
         CMSCore::CRUDRoute('blog', 'blogs');
 
-
 		// COURSE
 		CMSCore::CRUDRoute('chef', 'chefs');
         CMSCore::CRUDRoute('course', 'courses');
@@ -42,8 +41,12 @@ Route::group(['prefix'=>'admin'], function () {
 
         // PRODUCT
         CMSCore::CRUDRoute('productcategory', 'productcategories');
+        CMSCore::CRUDRoute('tag', 'tags');
         CMSCore::CRUDRoute('product', 'products');
 
+
+        // PARTNER
+        CMSCore::CRUDRoute('partner', 'partners');
 
 	});
 });
@@ -54,15 +57,16 @@ Route::group(['middleware' => ['authweb'], 'roles'=>['CUSTOMER', 'CUSTOMERBIZ'],
 });
 
 
-Route::get('/', 'Frontend\HomeController@getMaintenance')->name('maintenance');
+Route::get('/', 'Frontend\PageController@getMaintenance')->name('maintenance');
 
-Route::get('/home', 'Frontend\HomeController@index')->name('home');
+Route::get('/home', 'Frontend\PageController@getHome')->name('home');
+Route::get('/about', 'Frontend\PageController@getAbout')->name('about');
+Route::get('/contact-us', 'Frontend\PageController@getContact')->name('contact');
 
-Route::get('/about', 'Frontend\AboutController@index')->name('about');
-
-Route::get('/product/{type?}', 'Frontend\ProductController@index')->name('product');
-
-Route::get('/product/{type?}/detail/{url?}', 'Frontend\ProductController@getDetail')->name('product-detail');
+Route::group(['prefix'=>'product'], function () {
+    Route::get('/{type?}', 'Frontend\ProductController@index')->name('product');
+    Route::get('/{type?}/detail/{url?}', 'Frontend\ProductController@getDetail')->name('product-detail');
+});
 
 Route::group(['prefix'=>'baking-course'], function () {
     Route::get('/', 'Frontend\CourseController@index')->name('course');
@@ -75,8 +79,6 @@ Route::group(['prefix'=>'blog'], function () {
     Route::get('/{permalink?}', 'Frontend\BlogController@index')->name('blog');
     Route::get('/detail/{permalink}', 'Frontend\BlogController@getDetail')->name('blog-detail');
 });
-
-Route::get('/contact-us', 'Frontend\ContactController@index')->name('contact');
 
 
 

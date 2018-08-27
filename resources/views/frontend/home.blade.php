@@ -38,11 +38,9 @@
 
                 <div class="container small">
                     <div class="course-date-slider">
-                        <div><h3>Sunday, 21th January 2018</h3></div>
-                        <div><h3>Saturday, 27th January 2018</h3></div>
-                        <div><h3>Sunday, 29th January 2018</h3></div>
-                        <div><h3>Wednesday, 2nd February 2018</h3></div>
-                        <div><h3>Friday, 10th February 2018</h3></div>
+                        @foreach(@$courses as $key => $item)
+                            <div><h3>{!! getDateOnly(@$item->dateFrom) !!}</h3></div>
+                        @endforeach
                     </div>
                 </div>
 
@@ -52,7 +50,7 @@
 
                 <div class="container">
                     <div class="course-detail-slider">
-                        @for($i = 0 ; $i < 5 ; $i++)
+                        @foreach(@$courses as $key => $item)
                             <div>
                                 <div class="box-detail">
                                     <div class="row">
@@ -60,7 +58,9 @@
                                             <div class="wrapper">
                                                 <img class="icon" src="{!! url('/') !!}/assets/frontend/images/chef-hat-icon.png" alt="Chef Hat Rossy Bakery Supplier Icon">
                                                 <p class="title">Baking Course by</p>
-                                                <h3 class="name">Chef Cessar</h3>
+                                                <h3 class="name">
+                                                    @foreach(@$item->chefs as $idx => $chef) {!! @$chef->name !!}{!! (count(@$item->chefs) && @$idx+1 != count(@$item->chefs)) ? ', ' : '' !!} @endforeach
+                                                </h3>
 
                                                 <p>
                                                     Baking Demo<br>
@@ -72,29 +72,29 @@
                                             <div class="wrapper">
                                                 <img class="icon" src="{!! url('/') !!}/assets/frontend/images/location-icon.png" alt="Location Rossy Bakery Supplier Icon">
                                                 <p class="title">Baking at</p>
-                                                <h3 class="name">Toko Rossy</h3>
+                                                <h3 class="name">{!! @$item->coursePlace->name !!}</h3>
 
                                                 <p>
-                                                    Jl. Kaji No.38,Jakarta Pusat<br>
-                                                    (021) 63211 45/47
+                                                    {!! @$item->coursePlace->address !!}<br>
+                                                    {!! @$item->coursePlace->phone !!}
                                                 </p>
                                             </div>
                                         </div>
                                         <div class="col-md-4">
                                             <div class="wrapper">
                                                 <img class="icon" src="{!! url('/') !!}/assets/frontend/images/book-icon.png" alt="Book Rossy Bakery Supplier Icon">
-                                                <h3 class="name">Rp. 250.000,-</h3>
+                                                <h3 class="name">Rp. {!! getPriceNumber(@$item->price) !!}</h3>
 
                                                 <div class="button-wrapper">
-                                                    <a href="#" class="btn transparent-btn">SEE DETAILS</a>
-                                                    <a href="#" class="btn third-btn">BOOK NOW</a>
+                                                    <a href="{!! route('course-detail', ['permalink' => @$item->permalink]) !!}" class="btn transparent-btn">SEE DETAILS</a>
+                                                    <a href="{!! route('course-book', ['permalink' => @$item->permalink]) !!}" class="btn third-btn">BOOK NOW</a>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        @endfor
+                        @endforeach
                     </div>
                 </div>
 
@@ -108,18 +108,18 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-6 col-12 mb-xs-30">
-                        <img src="{!! url('/') !!}/assets/frontend/images/chef-photo.png" alt="Chef Photo">
+                        <img src="{!! getImageUrlSize(@$about->featuredImage[0], 'md') !!}" alt="Chef Photo">
                     </div>
                     <div class="col-md-6 col-12 mb-xs-30">
                         <div class="box-detail">
                             <h2 class="default-title mb-20">About Us</h2>
-                            <h3 class="default-subtitle mb-20">Best Quality for Baking</h3>
+                            <h3 class="default-subtitle mb-20">{!! @$about->tagline !!}</h3>
 
                             <p class="default-summary mb-80">
-                                Rossy Bakery Supplier is a high quality and highly trusted cake supplier which is located in center of Jakarta. We providing excellent products that will enhance the taste of the cakes and bread you bake. No need to be in doubt, cause famous chef are on our side.
+                                {!! @$about->summary !!}
                             </p>
 
-                            <a href="#" class="text-btn">SEE MORE DETAIL <i class="fa fa-long-arrow-right"></i></a>
+                            <a href="{!! route('about') !!}" class="text-btn">SEE MORE DETAIL <i class="fa fa-long-arrow-right"></i></a>
                         </div>
 
 
@@ -177,44 +177,26 @@
 
 
             <div class="blog-slider">
-                @for($i = 0 ; $i < 3 ; $i++)
+                @foreach($blogs as $key => $item)
                     <div>
                         <div class="card-blog">
                             <div class="thumb-wrapper">
-                                <img src="{!! url('/') !!}/assets/frontend/images/blog-image-1.jpg" alt="Thumb Blog {!! env('PROJECT_NAME') !!}">
+                                <img src="{!! getImageUrlSize(@$item->thumbnailImage, 'md') !!}" alt="Thumb Blog {!! env('PROJECT_NAME') !!}">
                             </div>
                             <div class="detail-wrapper">
-                                <h4 class="tag">NEWS</h4>
-                                <p class="date">20 January 2018</p>
+                                <h4 class="tag">{!! @$item->category->name !!}</h4>
+                                <p class="date">{!! getDateOnly(@$item->publishDate) !!}</p>
 
-                                <a href="#" class="title">Foto bersama chef Caesar dalam acara Demo Toffieco dan Hollman @JW Marriot Hotel</a>
+                                <a href="#" class="title">{!! @$item->name !!}</a>
 
 
                                 <div class="btn-wrapper">
-                                    <a href="#" class="text-btn">MORE DETAIL <i class="fa fa-long-arrow-right"></i></a>
+                                    <a href="{!! route('blog-detail', ['permalink' => @$item->permalink]) !!}" class="text-btn">MORE DETAIL <i class="fa fa-long-arrow-right"></i></a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div>
-                        <div class="card-blog">
-                            <div class="thumb-wrapper">
-                                <img src="{!! url('/') !!}/assets/frontend/images/blog-image-2.jpg" alt="Thumb Blog {!! env('PROJECT_NAME') !!}">
-                            </div>
-                            <div class="detail-wrapper">
-                                <h4 class="tag">TIPS</h4>
-                                <p class="date">18 January 2018</p>
-
-                                <a href="#" class="title">10 Pilihan cake yang tepat untuk mengawali acara tahun baru IMLEK 2018</a>
-
-
-                                <div class="btn-wrapper">
-                                    <a href="#" class="text-btn">MORE DETAIL <i class="fa fa-long-arrow-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                @endfor
+                @endforeach
             </div>
 
 
@@ -232,7 +214,7 @@
                                 <img class="icon" src="{!! url('/') !!}/assets/frontend/images/chef-icon.png" alt="Call To Action {!! env('PROJECT_NAME') !!}">
                             </div>
 
-                            <a href="#" class="detail-wrapper">
+                            <a href="{!! route('course') !!}" class="detail-wrapper">
                                 <h3 class="name">Book a Baking Course</h3>
 
                                 <hr class="custom-line">
@@ -252,7 +234,7 @@
                                 <img class="icon" src="{!! url('/') !!}/assets/frontend/images/cake-icon.png" alt="Call To Action {!! env('PROJECT_NAME') !!}">
                             </div>
 
-                            <a href="#" class="detail-wrapper">
+                            <a href="{!! route('contact') !!}" class="detail-wrapper">
                                 <h3 class="name">Contact us for more further</h3>
 
                                 <hr class="custom-line">

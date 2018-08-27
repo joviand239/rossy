@@ -77,20 +77,19 @@
 
                         <div class="partner-wrapper">
 
-                            @for($i = 0 ; $i < 8 ; $i++)
+                            @foreach(@$partners as $key => $item)
                                 <div class="partner-card">
 
-                                    <h3 class="name">TOKO VIVY</h3>
+                                    <h3 class="name">{!! @$item->name !!}</h3>
 
-                                    <p class="address">Jl. sutera delima VIII, no.2C</p>
-                                    <p class="location">Alam Sutera</p>
-                                    <p class="phone"><strong>p.</strong>(021) 5397878</p>
+                                    <p class="address">{!! @$item->address !!}</p>
+                                    <p class="phone"><strong>p.</strong>{!! @$item->phone !!}</p>
 
 
                                     <a href="#" class="text-btn small">SEE MAPS <i class="fa fa-long-arrow-right"></i></a>
 
                                 </div>
-                            @endfor
+                            @endforeach
 
                         </div>
 

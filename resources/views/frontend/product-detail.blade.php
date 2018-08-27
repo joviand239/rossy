@@ -148,7 +148,7 @@
                 </h1>
 
 
-                <a href="#" class="btn third-btn">
+                <a href="{!! route('course') !!}" class="btn third-btn">
                     BOOK NOW
                 </a>
             </div>

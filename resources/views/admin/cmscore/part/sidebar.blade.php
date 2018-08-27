@@ -50,7 +50,7 @@
             </li>
 
 
-            <li class="dropdown {!! isActiveRoute(['admin.productcategories', 'admin.products']) !!}">
+            <li class="dropdown {!! isActiveRoute(['admin.productcategories', 'admin.products', 'admin.tags']) !!}">
                 <a href="#">
                     <div class="icon">
                         <i class="fa fa-database" aria-hidden="true"></i>
@@ -63,6 +63,9 @@
                     <ul>
                         <li class="dropdown">
                             <a href="{!! route('admin.productcategories') !!}">Category</a>
+                        </li>
+                        <li class="dropdown">
+                            <a href="{!! route('admin.tags') !!}">Tag</a>
                         </li>
                         <li class="dropdown">
                             <a href="{!! route('admin.products') !!}">Product</a>
@@ -91,6 +94,16 @@
                         </li>
                     </ul>
                 </div>
+            </li>
+
+
+            <li class="{!! isActiveRoute(['admin.partners']) !!}">
+                <a href="{!! route('admin.partners') !!}">
+                    <div class="icon">
+                        <i class="fa fa-users" aria-hidden="true"></i>
+                    </div>
+                    <div class="title">Partner</div>
+                </a>
             </li>
 
 

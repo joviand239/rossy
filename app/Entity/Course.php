@@ -34,7 +34,7 @@ class Course extends BaseEntity {
     }
 
     public function coursePlace(){
-        return $this->hasOne(CoursePlace::class, 'id', 'cousePlaceId');
+        return $this->hasOne(CoursePlace::class, 'id', 'coursePlaceId');
     }
 
     const FORM_REQUIRED = ['name'];

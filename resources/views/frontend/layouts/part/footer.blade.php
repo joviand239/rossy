@@ -41,7 +41,7 @@
                             <a href="{!! route('blog') !!}">Blog</a>
                         </li>
                         <li class="item">
-                            <a href="[{!! route('contact') !!}">Contact Us</a>
+                            <a href="{!! route('contact') !!}">Contact Us</a>
                         </li>
                     </ul>
                 </div>
