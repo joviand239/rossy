@@ -1,5 +1,5 @@
 .app .app-login {
-  background: #000000; }
+  background: #680e28; }
 .app .logo-login {
   max-width: 350px;
   width: 150px; }
@@ -12,7 +12,7 @@
   margin-right: 10px; }
 
 .app-login .app-body .app-block .app-form .form-header .highlight {
-  color: #000000;
+  color: #680e28;
   display: block;
   padding-top: 25px; }
 
@@ -40,38 +40,38 @@ a {
     text-decoration: none; }
 
 .main-color {
-  color: #000000;
+  color: #680e28;
   transition: all 0.5s ease; }
   .main-color:hover {
-    color: #000000; }
+    color: #d3ae48; }
 
 .btn.btn-success {
-  border-color: #000000;
-  border-bottom-color: #000000;
-  background-color: #000000; }
+  border-color: #680e28;
+  border-bottom-color: #680e28;
+  background-color: #680e28; }
 
 aside.app-sidebar {
   height: auto; }
   aside.app-sidebar .sidebar-menu ul.sidebar-nav {
     padding: 0px; }
     aside.app-sidebar .sidebar-menu ul.sidebar-nav > li.active > a .title {
-      color: #000000; }
+      color: #680e28; }
     aside.app-sidebar .sidebar-menu ul.sidebar-nav > li.active > a .icon {
-      background-color: #000000;
+      background-color: #680e28;
       color: white; }
 
 .input-group .change, .input-group .cancel {
   cursor: pointer;
   transition: all 0.5s ease;
-  background-color: #000000;
+  background-color: #680e28;
   color: white; }
   .input-group .change:hover, .input-group .cancel:hover {
     transform: scaleX(1.1); }
 
 .pagination > li.active > a, .pagination > li.active > span {
   border: 0;
-  border-bottom: 2px solid #000000;
-  background-color: #000000; }
+  border-bottom: 2px solid #680e28;
+  background-color: #680e28; }
 
 .note-editor.note-frame .note-editing-area .note-editable {
   min-height: 100px; }

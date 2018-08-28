@@ -39,7 +39,7 @@
                 <div class="container small">
                     <div class="course-date-slider">
                         @foreach(@$courses as $key => $item)
-                            <div><h3>{!! getDateOnly(@$item->dateFrom) !!}</h3></div>
+                            <div><h3>{!! getFullDate(@$item->dateFrom) !!}</h3></div>
                         @endforeach
                     </div>
                 </div>
@@ -185,7 +185,7 @@
                             </div>
                             <div class="detail-wrapper">
                                 <h4 class="tag">{!! @$item->category->name !!}</h4>
-                                <p class="date">{!! getDateOnly(@$item->publishDate) !!}</p>
+                                <p class="date">{!! getCustomDate(@$item->publishDate) !!}</p>
 
                                 <a href="#" class="title">{!! @$item->name !!}</a>
 

@@ -48,10 +48,10 @@
                     <div class="col-md-3">
                         <div class="side-wrapper mb-20">
                             <label>DATE</label>
-                            <p>{!! getDateOnly(@$page->publishDate) !!}</p>
+                            <p>{!! getCustomDate(@$page->publishDate) !!}</p>
 
                             <label>TIME</label>
-                            <p>{!! getTimeOnly(@$page->publishTime) !!}</p>
+                            <p>{!! getCustomTime(@$page->publishTime) !!}</p>
 
                             @if(count(@$page->chefs))
                                 <label>TEACHER/ CHEF</label>

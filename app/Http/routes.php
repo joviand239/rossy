@@ -44,6 +44,9 @@ Route::group(['prefix'=>'admin'], function () {
         CMSCore::CRUDRoute('tag', 'tags');
         CMSCore::CRUDRoute('product', 'products');
 
+        Route::get('/product/{parentId}/varian/{id}', 'Admin\ProductvarianController@details')->name('admin.productvarian');
+        Route::post('/product/{parentId}/varian/{id}', 'Admin\ProductvarianController@save');
+        Route::get('/varian/delete/{id?}', 'Admin\ProductvarianController@delete')->name('admin.productvarian.delete');
 
         // PARTNER
         CMSCore::CRUDRoute('partner', 'partners');

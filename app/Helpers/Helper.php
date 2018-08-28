@@ -6,6 +6,19 @@ use \App\Entity\User\Customer;
 use \App\Util\Constant;
 use \App\Entity\CMS\About;
 
+
+function getFullDate($stringDate){
+    return (new Carbon($stringDate))->format('l, jS F Y');
+}
+
+function getCustomDate($stringDate){
+    return (new Carbon($stringDate))->format('d F Y');
+}
+
+function getCustomTime($stringDate){
+    return (new Carbon($stringDate))->format('h:i A');
+}
+
 function getPriceNumberWithComa($value) {
     if (empty($value)) {
         return 0;

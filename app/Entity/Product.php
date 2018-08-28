@@ -10,10 +10,31 @@ use App\Util\Constant;
 class Product extends BaseEntity {
     protected $table = 'product';
 
+    protected $appends = [
+        'permalink',
+    ];
+
+    protected $fillable = [
+        'productCategoryId',
+        'tags',
+        'name',
+        'featuredImage',
+        'gallery',
+        'description',
+        'dosageInstruction',
+        'useFor',
+    ];
+
     const FORM_REQUIRED = [
         'categoryId',
         'name'
     ];
+
+    const FORM_DISABLED = [
+        'hasVarian'
+    ];
+
+    const USE_META_SET = true;
 
     const FORM_TYPE = [
         'productCategoryId' => 'Select',
@@ -24,7 +45,6 @@ class Product extends BaseEntity {
         'description' => 'TextArea',
         'dosageInstruction' => 'TextArea',
         'useFor' => 'TextArea',
-        'price' => 'Amount',
     ];
 
     const INDEX_FIELD = [
@@ -48,6 +68,14 @@ class Product extends BaseEntity {
 
     public function category(){
         return $this->hasOne(ProductCategory::class, 'id', 'productCategoryId');
+    }
+
+    public function varians(){
+        return $this->hasMany(ProductVarian::class, 'productId', 'id');
+    }
+
+    public function getPermalinkAttribute() {
+        return getPermalink($this->name, $this->id);
     }
 
     public function getValue($key, $listItem, $language){

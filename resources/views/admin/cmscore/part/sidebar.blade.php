@@ -68,7 +68,7 @@
                             <a href="{!! route('admin.tags') !!}">Tag</a>
                         </li>
                         <li class="dropdown">
-                            <a href="{!! route('admin.products') !!}">Product</a>
+                            <a href="{!! route('admin.products') !!}">Products</a>
                         </li>
                     </ul>
                 </div>

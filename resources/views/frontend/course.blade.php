@@ -26,7 +26,7 @@
 
 
                         <div class="detail-wrapper">
-                            <span class="date">{!! getDateOnly(@$item->dateFrom) !!}</span> <span class="author">Oleh: @foreach(@$item->chefs as $key => $chef) {!! @$chef->name !!}{!! (count(@$item->chefs) && @$key+1 != count(@$item->chefs)) ? ', ' : '' !!} @endforeach</span>
+                            <span class="date">{!! getFullDate(@$item->dateFrom) !!}</span> <span class="author">Oleh: @foreach(@$item->chefs as $key => $chef) {!! @$chef->name !!}{!! (count(@$item->chefs) && @$key+1 != count(@$item->chefs)) ? ', ' : '' !!} @endforeach</span>
 
                             <a href="{!! route('course-detail', ['permalink' => @$item->permalink]) !!}" class="name">{!! @$item->name !!}</a>
 

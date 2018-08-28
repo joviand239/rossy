@@ -57,13 +57,13 @@
                     <div class="col-md-3">
                         <div class="side-wrapper mb-20">
                             <label>DATE START</label>
-                            <p>{!! getDateOnly(@$page->dateFrom) !!}</p>
+                            <p>{!! getFullDate(@$page->dateFrom) !!}</p>
 
                             <label>DATE FINISH</label>
-                            <p>{!! getDateOnly(@$page->dateTo) !!}</p>
+                            <p>{!! getFullDate(@$page->dateTo) !!}</p>
 
                             <label>TIME</label>
-                            <p>{!! getTimeOnly(@$page->timeFrom) !!}</p>
+                            <p>{!! getCustomTime(@$page->timeFrom) !!}</p>
 
                             <label>TEACHER/ CHEF</label>
                             <p>@foreach(@$page->chefs as $key => $chef) {!! @$chef->name !!}{!! (count(@$page->chefs) && @$key+1 != count(@$item->chefs)) ? ', ' : '' !!} @endforeach</p>

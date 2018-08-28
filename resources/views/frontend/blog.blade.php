@@ -39,7 +39,7 @@
                                 </div>
                                 <div class="detail-wrapper">
                                     <h4 class="tag">{!! @$item->category->name !!}</h4>
-                                    <p class="date">{!! getDateOnly(@$item->publishDate) !!}</p>
+                                    <p class="date">{!! getCustomDate(@$item->publishDate) !!}</p>
 
                                     <a href="{!! route('blog-detail', ['permalink' => @$item->permalink]) !!}" class="title">{!! @$item->name !!}</a>
 
