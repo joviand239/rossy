@@ -67,8 +67,8 @@ Route::get('/about', 'Frontend\PageController@getAbout')->name('about');
 Route::get('/contact-us', 'Frontend\PageController@getContact')->name('contact');
 
 Route::group(['prefix'=>'product'], function () {
-    Route::get('/{type?}', 'Frontend\ProductController@index')->name('product');
-    Route::get('/{type?}/detail/{url?}', 'Frontend\ProductController@getDetail')->name('product-detail');
+    Route::get('/{type?}', 'Frontend\ProductController@getProducts')->name('product');
+    Route::get('/detail/{permalink}', 'Frontend\ProductController@getDetail')->name('product-detail');
 });
 
 Route::group(['prefix'=>'baking-course'], function () {

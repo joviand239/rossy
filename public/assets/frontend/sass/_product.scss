@@ -17,6 +17,10 @@
       font-weight: 600;
       @include transition(all, 2s, ease);
 
+      a {
+        text-transform: uppercase;
+      }
+
       &.active {
         border-bottom: 3px solid $main-color;
         font-weight: 700;

@@ -16,33 +16,25 @@
 
                 <ul class="nav-product">
                     <li class="item active">
-                        <a href="#">
+                        <a href="{!! route('product', ['type' => \App\Util\Constant::ALL]) !!}">
+                            ALL
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a href="{!! route('product', ['type' => \App\Util\Constant::ALL]) !!}">
                             POPULAR
                         </a>
                     </li>
-                    <li class="item">
-                        <a href="#">
-                            TOFFIECO
-                        </a>
-                    </li>
-                    <li class="item">
-                        <a href="#">
-                            HOLLMANN
-                        </a>
-                    </li>
-                    <li class="item">
-                        <a href="#">
-                            BELFIECO
-                        </a>
-                    </li>
-                    <li class="item">
-                        <a href="#">
-                            DECORATION
-                        </a>
-                    </li>
+                    @foreach(@$categories as $key => $item)
+                        <li class="item">
+                            <a href="{!! route('product', ['type' => @$item->permalink]) !!}">
+                                {!! @$item->name !!}
+                            </a>
+                        </li>
+                    @endforeach
                 </ul>
 
-                <ul class="nav-product-tag">
+                {{--<ul class="nav-product-tag">
                     <li class="item active">
                         <a href="#">
                             All
@@ -88,19 +80,19 @@
                             Semprot
                         </a>
                     </li>
-                </ul>
+                </ul>--}}
 
                 <div class="row">
-                    @for($i = 0 ; $i < 8 ; $i++)
+                    @foreach(@$list as $key => $item)
                         <div class="col-md-3 col-12">
                             <div class="card-product">
                                 <div class="image-wrapper">
-                                    <a href="#">
-                                        <img class="thumbnail" src="{!! url('/') !!}/assets/frontend/images/product-dummy.png" alt="Product Thumbnail {!! env('PROJECT_NAME') !!}">
+                                    <a href="{!! route('product-detail', ['permalink' => @$item->permalink]) !!}">
+                                        <img class="thumbnail" src="{!! getImageUrlSize(@$item->featuredImage, 'md') !!}" alt="{!! @$item->name !!}">
                                     </a>
                                 </div>
 
-                                <a href="#" class="name">Toffieco Coffee Rhum</a>
+                                <a href="{!! route('product-detail', ['permalink' => @$item->permalink]) !!}" class="name">{!! @$item->name !!}</a>
 
                                 <ul class="size-list">
                                     <li class="item">
@@ -118,7 +110,7 @@
                                 </ul>
                             </div>
                         </div>
-                    @endfor
+                    @endforeach
                 </div>
 
 

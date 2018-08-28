@@ -6,6 +6,8 @@ class Constant {
     const YES = 'Y';
     const NO = 'N';
 
+    const ALL = 'all';
+
     const USER_ROLE_ADMIN = 'ADMIN';
     const USER_ROLE_CUSTOMER = 'CUSTOMER';
     const USER_ROLE_CUSTOMERBIZ = 'CUSTOMERBIZ';

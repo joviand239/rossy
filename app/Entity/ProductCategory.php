@@ -10,6 +10,16 @@ use App\Util\Constant;
 class ProductCategory extends BaseEntity {
     protected $table = 'productCategory';
 
+    protected $appends = [
+        'permalink',
+    ];
+
+    protected $fillable = [
+        'name',
+        'logo',
+        'description',
+    ];
+
     const FORM_REQUIRED = [
         'name'
     ];
@@ -28,7 +38,9 @@ class ProductCategory extends BaseEntity {
 
     ];
 
-
+    public function getPermalinkAttribute() {
+        return getPermalink($this->name, $this->id);
+    }
 
     public function getValue($key, $listItem, $language){
 

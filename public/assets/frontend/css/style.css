@@ -842,6 +842,8 @@ input.custom-control {
     -webkit-transition: all 2s ease;
     -moz-transition: all 2s ease;
     -o-transition: all 2s ease; }
+    #product .nav-product .item a {
+      text-transform: uppercase; }
     #product .nav-product .item.active {
       border-bottom: 3px solid #680e28;
       font-weight: 700; }

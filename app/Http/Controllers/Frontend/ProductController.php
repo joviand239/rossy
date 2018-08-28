@@ -8,23 +8,46 @@ use App\Entity\CMS\PageProduct;
 use App\Entity\CMS\WhyGerayPrint;
 use App\Entity\Product;
 
+use App\Entity\ProductCategory;
 use App\Service\Image\ImageService;
 
 use App\Entity\CMS\Home;
+use App\Util\Constant;
 
 
 class ProductController extends FrontendController {
 
-    public function index() {
+    public function getProducts($type = Constant::ALL) {
         $page = PageProduct::getPage();
 
+        $list = [];
+
+        $queryProduct = Product::query();
+
+        if ($type != Constant::ALL) {
+            $categoryId = parsePermalinkToId($type);
+
+            $queryProduct->where('productCategoryId', $categoryId);
+        }
+
+        $list = $queryProduct->get();
+
+        $categories = ProductCategory::all();
+
         return view('frontend.product', [
-            'page' => $page->json
+            'page' => $page->json,
+            'categories' => @$categories,
+            'list' => @$list,
         ]);
     }
 
-    public function getDetail() {
+    public function getDetail($permalink) {
+        $id = parsePermalinkToId($permalink);
 
-        return view('frontend.product-detail');
+        $page = Product::get($id);
+
+        return view('frontend.product-detail', [
+            'page' => @$page,
+        ]);
     }
 }

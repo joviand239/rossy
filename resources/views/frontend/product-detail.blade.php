@@ -1,8 +1,9 @@
 @extends('frontend.layouts.frontend')
 
-@section('meta_title', 'Product Detail')
+@section('metaTitle', @$page->metaTitle)
+@section('metaDescription', @$page->metaDescription)
+@section('metaKeywords', @$page->metaKeywords)
 
-@section('meta_description', 'Product Detail')
 
 @section('content')
 
@@ -16,19 +17,21 @@
                     <div class="col-md-3 col-12">
 
                         <ul id="productGallery">
-                            <li data-thumb="{!! url('/') !!}/assets/frontend/images/product-dummy.png" data-src="{!! url('/') !!}/assets/frontend/images/product-dummy.png">
+                            <li data-thumb="{!! getImageUrlSize(@$page->featuredImage, 'xs') !!}" data-src="{!! getImageUrlSize(@$page->featuredImage, 'md') !!}">
                                 <img src="{!! url('/') !!}/assets/frontend/images/product-dummy.png" />
                             </li>
-                            <li data-thumb="{!! url('/') !!}/assets/frontend/images/product-dummy.png" data-src="{!! url('/') !!}/assets/frontend/images/product-dummy.png">
-                                <img src="{!! url('/') !!}/assets/frontend/images/product-dummy.png" />
-                            </li>
+                            @foreach(@$page->gallery as $item)
+                                <li data-thumb="{!! getImageUrlSize(@$item, 'xs') !!}" data-src="{!! getImageUrlSize(@$item, 'md') !!}">
+                                    <img src="{!! url('/') !!}/assets/frontend/images/product-dummy.png" />
+                                </li>
+                            @endforeach
                         </ul>
 
 
                     </div>
                     <div class="col-md-6 col-12">
 
-                        <h1 class="product-name">Toffieco - Coffee Rhum</h1>
+                        <h1 class="product-name">{!! @$page->category->name !!} - {!! @$page->name !!}</h1>
 
                         <ul class="share-wrapper">
                             <li class="item">
@@ -54,40 +57,31 @@
                         </ul>
 
                         <p>
-                            Toffieco Perisa Coffee Rhum ini digunakan untuk menambah aroma yang tajam pada kue
+                            {!! @$page->description !!}
                         </p>
 
                         <p>
                             Takaran penggunaan :<br>
-                            Masukkan 20ml Perisa Coffee Rhum ini ke dalam 1kg adonan
+                            {!! @$page->dosageInstruction !!}
                         </p>
 
                         <p>
-                            Digunakan untuk : Vla, Pudding, Ice Cream, Ganache, Aneka Kue, dll
+                            Digunakan untuk : {!! @$page->useFor !!}
                         </p>
 
                         <br>
                         <br>
 
-                        <p class="bold">Kemasan</p>
-
-                        <ul class="size-wrapper">
-                            <li class="item active">
-                                24 x 100g
-                            </li>
-                            <li class="item">
-                                24 x 250g
-                            </li>
-                            <li class="item">
-                                24 x 500g
-                            </li>
-                            <li class="item">
-                                24 x 1000g
-                            </li>
-                            <li class="item">
-                                24 x 5000g
-                            </li>
-                        </ul>
+                        @if(@$page->hasVarian)
+                            <p class="bold">Kemasan</p>
+                            <ul class="size-wrapper">
+                                @foreach($page->varians as $item)
+                                    <li class="item">
+                                        {!! @$item->name !!}
+                                    </li>
+                                @endforeach
+                            </ul>
+                        @endif
 
                     </div>
                     <div class="col-md-3 col-12">

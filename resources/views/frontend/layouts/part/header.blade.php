@@ -13,7 +13,7 @@
                     <a class="nav-link" href="{!! route('home') !!}">Home</a>
                 </li>
                 <li class="nav-item {!! isActiveRoute(['product']) !!}">
-                    <a class="nav-link" href="{!! route('product', ['type' => 'popular']) !!}">Product</a>
+                    <a class="nav-link" href="{!! route('product', ['type' => \App\Util\Constant::ALL]) !!}">Product</a>
                 </li>
                 <li class="nav-item {!! isActiveRoute(['about']) !!}">
                     <a class="nav-link" href="{!! route('about') !!}">About Us</a>

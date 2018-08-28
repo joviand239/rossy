@@ -2,12 +2,15 @@
 
 namespace App\Entity;
 
+use App\CMSTrait\SingleImageTrait;
 use App\Entity\Base\BaseEntity;
 use App\Entity\User\CustomerDetails;
 use App\Util\Constant;
 
 
 class Product extends BaseEntity {
+    use SingleImageTrait;
+
     protected $table = 'product';
 
     protected $appends = [
