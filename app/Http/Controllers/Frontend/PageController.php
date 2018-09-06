@@ -8,6 +8,7 @@ use App\Entity\CMS\History;
 use App\Entity\CMS\Home;
 use App\Entity\Course;
 use App\Entity\Partner;
+use App\Entity\Product;
 
 
 class PageController extends FrontendController {
@@ -20,11 +21,14 @@ class PageController extends FrontendController {
 
         $blogs = Blog::all();
 
+        $products = Product::limit(8)->get();
+
         return view('frontend.home', [
             'page' => $page->json,
             'about' => $about->json,
             'courses' => @$courses,
-            'blogs' => @$blogs
+            'blogs' => @$blogs,
+            'products' => @$products
         ]);
     }
 

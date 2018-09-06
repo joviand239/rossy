@@ -75,8 +75,8 @@
                         @if(@$page->hasVarian)
                             <p class="bold">Kemasan</p>
                             <ul class="size-wrapper">
-                                @foreach($page->varians as $item)
-                                    <li class="item">
+                                @foreach($page->varians as $key => $item)
+                                    <li class="item {!! ($key == 0) ? 'active' : '' !!}" data-price="{!! @$item->price !!}">
                                         {!! @$item->name !!}
                                     </li>
                                 @endforeach
@@ -87,17 +87,13 @@
                     <div class="col-md-3 col-12">
                         <div class="side-wrapper">
                             <label>PRICE</label>
-                            <p class="price">Rp. 800.000,-</p>
+                            <p id="product-price" class="price">Rp. {!! getPriceNumber($page->varians[0]->price) !!}</p>
                         </div>
                     </div>
                 </div>
 
 
-
-
-
-
-                <h4 class="default-subtitle small secondary mb-30">SIMILAR PRODUCT</h4>
+                {{--<h4 class="default-subtitle small secondary mb-30">SIMILAR PRODUCT</h4>
 
                 <div class="row">
                     @for($i = 0 ; $i < 4 ; $i++)
@@ -128,7 +124,7 @@
                             </div>
                         </div>
                     @endfor
-                </div>
+                </div>--}}
 
             </div>
         </div>
@@ -152,5 +148,24 @@
     </section>
 
 
+@endsection
+
+@section('jsCustom')
+    <script>
+        $(document).ready(function () {
+
+            $('.size-wrapper .item').click(function (e) {
+                var price = $(this).attr('data-price');
+
+                $('.size-wrapper .item').removeClass('active');
+
+                $(this).addClass('active');
+
+                $('#product-price').html(renderHtmlPrice(price, 'Rp.'))
+            });
+
+
+        })
+    </script>
 @endsection
 

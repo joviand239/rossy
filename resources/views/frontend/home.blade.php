@@ -136,34 +136,19 @@
                 <h2 class="default-title secondary text-center mb-50">Our Popular Products</h2>
 
                 <div class="row">
-                    @for($i = 0 ; $i < 8 ; $i++)
+                    @foreach(@$products as $key => $item)
                         <div class="col-md-3 col-12">
                             <div class="card-product">
                                 <div class="image-wrapper">
-                                    <a href="#">
-                                        <img class="thumbnail" src="{!! url('/') !!}/assets/frontend/images/product-dummy.png" alt="Product Thumbnail {!! env('PROJECT_NAME') !!}">
+                                    <a href="{!! route('product-detail', ['permalink' => @$item->permalink]) !!}">
+                                        <img class="thumbnail" src="{!! getImageUrlSize(@$item->featuredImage, 'md') !!}" alt="{!! @$item->name !!}">
                                     </a>
                                 </div>
 
-                                <a href="#" class="name">Toffieco Coffee Rhum</a>
-
-                                <ul class="size-list">
-                                    <li class="item">
-                                        100 gr
-                                    </li>
-                                    <li class="item">
-                                        250 gr
-                                    </li>
-                                    <li class="item">
-                                        500 gr
-                                    </li>
-                                    <li class="item">
-                                        1 kg
-                                    </li>
-                                </ul>
+                                <a href="{!! route('product-detail', ['permalink' => @$item->permalink]) !!}" class="name">{!! @$item->name !!}</a>
                             </div>
                         </div>
-                    @endfor
+                    @endforeach
                 </div>
 
             </div>

@@ -93,21 +93,6 @@
                                 </div>
 
                                 <a href="{!! route('product-detail', ['permalink' => @$item->permalink]) !!}" class="name">{!! @$item->name !!}</a>
-
-                                <ul class="size-list">
-                                    <li class="item">
-                                        100 gr
-                                    </li>
-                                    <li class="item">
-                                        250 gr
-                                    </li>
-                                    <li class="item">
-                                        500 gr
-                                    </li>
-                                    <li class="item">
-                                        1 kg
-                                    </li>
-                                </ul>
                             </div>
                         </div>
                     @endforeach
