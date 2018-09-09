@@ -51,6 +51,14 @@ Route::group(['prefix'=>'admin'], function () {
         // PARTNER
         CMSCore::CRUDRoute('partner', 'partners');
 
+        // CONTACT
+        CMSCore::CRUDRoute('contact', 'contacts');
+
+
+        // SETTING
+        Route::get('/setting/{id?}', 'Admin\SettingController@details')->name('admin.setting');
+        Route::post('/setting/{id?}', 'Admin\SettingController@save')->name('admin.setting.save');
+
 	});
 });
 
@@ -65,6 +73,7 @@ Route::get('/', 'Frontend\PageController@getMaintenance')->name('maintenance');
 Route::get('/home', 'Frontend\PageController@getHome')->name('home');
 Route::get('/about', 'Frontend\PageController@getAbout')->name('about');
 Route::get('/contact-us', 'Frontend\PageController@getContact')->name('contact');
+Route::post('/contact-us', 'Frontend\PageController@submitContact')->name('submitContact');
 
 Route::group(['prefix'=>'product'], function () {
     Route::get('/{type?}', 'Frontend\ProductController@getProducts')->name('product');

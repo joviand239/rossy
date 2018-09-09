@@ -106,6 +106,25 @@
                 </a>
             </li>
 
+            <li class="{!! isActiveRoute(['admin.contacts']) !!}">
+                <a href="{!! route('admin.contacts') !!}">
+                    <div class="icon">
+                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                    </div>
+                    <div class="title">Contact</div>
+                </a>
+            </li>
+
+
+            <li class="{!! isActiveRoute(['admin.setting']) !!}">
+                <a href="{!! route('admin.setting') !!}">
+                    <div class="icon">
+                        <i class="fa fa-gears" aria-hidden="true"></i>
+                    </div>
+                    <div class="title">Setting</div>
+                </a>
+            </li>
+
 
             {{--<li class="dropdown" >
                 <a>

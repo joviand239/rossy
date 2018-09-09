@@ -5,11 +5,11 @@
         <div class="socmed-wrapper">
 
 
-            <a href="{!! getAboutAttribute('facebook') !!}" class="item fb">
+            <a href="{!! getSettingAttribute('facebook') !!}" class="item fb">
                 <i class="fa fa-facebook"></i> Facebook
             </a>
 
-            <a href="{!! getAboutAttribute('instagram') !!}" class="item ig">
+            <a href="{!! getSettingAttribute('instagram') !!}" class="item ig">
                 <i class="fa fa-instagram"></i> Instagram
             </a>
 
@@ -49,8 +49,8 @@
 
             </div>
             <div class="col-md-6 order-md-1">
-                <p>{!! getAboutAttribute('address') !!}</p>
-                <p>{!! getAboutAttribute('phone') !!}</p>
+                <p>{!! getSettingAttribute('address') !!}</p>
+                <p>{!! getSettingAttribute('phone') !!}</p>
                 <p>© Copyright 2018 Rossy Bakery Supplier. All rights are reserved</p>
             </div>
         </div>

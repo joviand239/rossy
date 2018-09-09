@@ -25,7 +25,7 @@
                     </li>
                     <li class="nav-item item">
                         <a class="nav-link" data-toggle="tab" href="#partner" role="tab" aria-controls="partner" aria-selected="false">
-                            Partner Location
+                            Distributors
                         </a>
                     </li>
                 </ul>
@@ -38,36 +38,36 @@
                             <div class="col-md-4 col-12">
                                 <div class="info-wrapper">
                                     <h3 class="label">TOKO ROSSY</h3>
-                                    <p>Rossy Bakery Supplier, Jl. Kaji No. 38, Jakarta Pusat</p>
+                                    <p>{!! getSettingAttribute('address') !!}</p>
 
                                     <h3 class="label">CONTACT</h3>
-                                    <p>(021) 63211 45/47a</p>
+                                    <p>{!! getSettingAttribute('phone') !!}</p>
 
                                     <h3 class="label">EMAIL</h3>
-                                    <p>rossybakerysupplier@gmail.com</p>
+                                    <p>{!! getSettingAttribute('email') !!}</p>
                                 </div>
                             </div>
                             <div class="col-md-8 col-12">
-                                <form>
+                                <form method="POST" action="{!! route('submitContact') !!}">
                                     <div class="form-group">
                                         <label class="label-form" for="name">Name</label>
-                                        <input type="text" class="form-control custom-control" id="name" name="name" placeholder="Your Name">
+                                        <input type="text" class="form-control custom-control" id="name" name="name" placeholder="Your Name" required>
                                     </div>
                                     <div class="form-group">
                                         <label class="label-form" for="email">Email</label>
-                                        <input type="email" class="form-control custom-control" id="email" name="email" placeholder="Your Email">
+                                        <input type="email" class="form-control custom-control" id="email" name="email" placeholder="Your Email" required>
                                     </div>
                                     <div class="form-group">
                                         <label class="label-form" for="phone">Phone Number</label>
-                                        <input type="text" class="form-control custom-control" id="phone" name="phone" placeholder="Your Phone Number">
+                                        <input type="text" class="form-control custom-control" id="phone" name="phone" placeholder="Your Phone Number" required>
                                     </div>
                                     <div class="form-group">
-                                        <label class="label-form" for="notes">Notes</label>
-                                        <textarea rows="5" class="form-control custom-control" id="notes" name="notes" placeholder="Notes/ Description"></textarea>
+                                        <label class="label-form" for="description">Notes</label>
+                                        <textarea rows="5" class="form-control custom-control" id="description" name="description" placeholder="Notes/ Description" required></textarea>
                                     </div>
 
                                     <div class="form-group text-right">
-                                        <a href="#" class="btn third-btn form-btn">SUMBIT</a>
+                                        <button type="submit" class="btn third-btn form-btn">SUMBIT</button>
                                     </div>
                                 </form>
                             </div>
@@ -86,7 +86,7 @@
                                     <p class="phone"><strong>p.</strong>{!! @$item->phone !!}</p>
 
 
-                                    <a href="#" class="text-btn small">SEE MAPS <i class="fa fa-long-arrow-right"></i></a>
+                                    <a target="_blank" href="{!! @$item->mapLink !!}" class="text-btn small">SEE MAPS <i class="fa fa-long-arrow-right"></i></a>
 
                                 </div>
                             @endforeach

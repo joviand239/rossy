@@ -5,6 +5,7 @@ use \App\Entity\Order;
 use \App\Entity\User\Customer;
 use \App\Util\Constant;
 use \App\Entity\CMS\About;
+use App\Entity\Setting;
 
 
 function getFullDate($stringDate){
@@ -239,12 +240,16 @@ function getOrderStatusName($name) {
     return $map[$name];
 }
 
-function getAboutAttribute($key){
-    $page = About::getPage();
+function getSettingAttribute($key){
+    $model = Setting::first();
+
+    if (!$model) {
+        return '';
+    }
 
 
-    if (isset($page->json->$key)){
-        return $page->json->$key;
+    if (isset($model->$key)){
+        return $model->$key;
     }else {
         return '';
     }

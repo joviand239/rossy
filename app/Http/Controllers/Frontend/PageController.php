@@ -6,9 +6,11 @@ use App\Entity\Blog;
 use App\Entity\CMS\About;
 use App\Entity\CMS\History;
 use App\Entity\CMS\Home;
+use App\Entity\Contact;
 use App\Entity\Course;
 use App\Entity\Partner;
 use App\Entity\Product;
+use Illuminate\Support\Facades\Input;
 
 
 class PageController extends FrontendController {
@@ -49,6 +51,18 @@ class PageController extends FrontendController {
         return view('frontend.contact', [
             'partners' => @$partners,
         ]);
+    }
+
+    public function submitContact() {
+        $input = Input::all();
+
+        $model = new Contact();
+
+        $model->fill($input);
+
+        $model->save();
+
+        return redirect()->back();
     }
 
     public function getMaintenance() {

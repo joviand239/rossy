@@ -13,7 +13,7 @@ class Partner extends BaseEntity {
         'phone' => 'Text',
         'email' => 'Text',
         'address' => 'TextArea',
-        'iframe' => 'TextArea'
+        'mapLink' => 'TextArea'
     ];
 
     const INDEX_FIELD = [
