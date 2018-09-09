@@ -61,6 +61,6 @@ class CourseController extends FrontendController {
         $booking->courseId = $id;
         $booking->save();
 
-        return redirect(route('course-detail', ['permalink' => @$page->permalink]))->with('success', 'book');
+        return redirect(route('course-detail', ['permalink' => @$page->permalink]))->with('success', '');
     }
 }

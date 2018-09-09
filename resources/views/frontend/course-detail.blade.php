@@ -112,7 +112,8 @@
 
             if (hasSuccess == 1) {
                 $('#bookingFormModal').modal({
-                    keyboard: false
+                    keyboard: false,
+                    backdrop: 'static'
                 });
             }
 

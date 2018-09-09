@@ -97,17 +97,28 @@
                     </div>
 
                 </div>
-
-
-
-
-
-
             </div>
         </div>
 
     </section>
 
 
+@endsection
+
+@section('jsCustom')
+    <script>
+        var success = {!! (session()->has('success')) ? 1 : 0 !!};
+
+        $(document).ready(function () {
+            
+            if (success) {
+                $('#successModal').modal({
+                    keyboard: false,
+                    backdrop: 'static',
+                });
+            }
+
+        });
+    </script>
 @endsection
 

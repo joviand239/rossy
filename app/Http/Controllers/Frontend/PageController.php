@@ -62,7 +62,7 @@ class PageController extends FrontendController {
 
         $model->save();
 
-        return redirect()->back();
+        return redirect()->back()->with('success', '');
     }
 
     public function getMaintenance() {
