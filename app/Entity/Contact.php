@@ -26,6 +26,7 @@ class Contact extends BaseEntity {
         'email',
         'phone',
         'description',
+        'createdAt'
     ];
 
     const INDEX_FIELD = [
