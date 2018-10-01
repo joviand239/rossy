@@ -1,28 +1,27 @@
 <?php
 namespace App\Service;
 
-
-
+use App\Entity\Setting;
 use Illuminate\Support\Facades\Mail;
-use App\Entity\User\CustomerDetails;
 use App\Entity\User\CustomerPromo;
 
 class MailerService {
 
 
-    public static function ResetPassword($emailTo, $password){
+    public static function contact($data){
         $details = [
-            'email' => $emailTo,
-            'password' => $password
+            'data' => @$data,
         ];
 
+        $emailTo = getSettingAttribute('contactEmail');
+
         try {
-            Mail::send('public.email.reset_password', $details,
+            Mail::send('email.contact', $details,
                 function ($message) use ($emailTo) {
                     $message
                         ->to($emailTo)
                         ->from(env('MAIL_FROM_ADDRESS'))
-                        ->subject('[Geray Print] Password Reset');
+                        ->subject('[Rossy] Contact Form');
                 });
         }catch(\Exception $msg){
             \Log::error($msg);

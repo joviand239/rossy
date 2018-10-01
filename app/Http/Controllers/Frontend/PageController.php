@@ -10,6 +10,7 @@ use App\Entity\Contact;
 use App\Entity\Course;
 use App\Entity\Partner;
 use App\Entity\Product;
+use App\Service\MailerService;
 use Illuminate\Support\Facades\Input;
 
 
@@ -61,6 +62,8 @@ class PageController extends FrontendController {
         $model->fill($input);
 
         $model->save();
+
+        MailerService::contact($model);
 
         return redirect()->back()->with('success', '');
     }
