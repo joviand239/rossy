@@ -8,7 +8,9 @@ use App\Service\CMSCore\CRUDService;
 
 class ContactController extends Controller {
     public function index() {
-        return view('admin.contact.index', ['list'=>Contact::all(), 'model'=>Contact::class]);
+        $list = Contact::orderBy('createdAt', 'desc')->get();
+
+        return view('admin.contact.index', ['list'=>@$list, 'model'=>Contact::class]);
     }
     public function details($id) {
         return view('admin.contact.details', ['model'=>Contact::get($id), 'id' => $id]);
