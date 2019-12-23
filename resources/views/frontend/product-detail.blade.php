@@ -18,11 +18,11 @@
 
                         <ul id="productGallery">
                             <li data-thumb="{!! getImageUrlSize(@$page->featuredImage, 'xs') !!}" data-src="{!! getImageUrlSize(@$page->featuredImage, 'md') !!}">
-                                <img src="{!! url('/') !!}/assets/frontend/images/product-dummy.png" />
+                                <img src="{!! getImageUrlSize(@$page->featuredImage, 'md') !!}" />
                             </li>
                             @foreach(@$page->gallery as $item)
                                 <li data-thumb="{!! getImageUrlSize(@$item, 'xs') !!}" data-src="{!! getImageUrlSize(@$item, 'md') !!}">
-                                    <img src="{!! url('/') !!}/assets/frontend/images/product-dummy.png" />
+                                    <img src="{!! getImageUrlSize(@$item, 'md') !!}" />
                                 </li>
                             @endforeach
                         </ul>

@@ -39,7 +39,7 @@
                             </div>
 
                             <div class="form-group text-right">
-                                <button type="submit" class="btn third-btn form-btn">SUMBIT</button>
+                                <button type="submit" class="btn third-btn form-btn">SUBMIT</button>
                             </div>
                         </form>
 
